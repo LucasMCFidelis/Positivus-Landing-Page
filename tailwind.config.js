@@ -11,6 +11,7 @@ export default {
       },
       fontSize: {
         'responsive-paragraph': 'clamp(0.8rem, 1rem, 1.5rem)',
+        'responsive-subtitle': 'clamp(1rem, 1.5rem, 2rem)',
         'responsive-title': 'clamp(2rem, 8vw, 3.5rem)',
       },
     },
