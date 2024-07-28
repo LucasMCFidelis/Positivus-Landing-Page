@@ -1,27 +1,49 @@
+import { Button } from "./components/button";
 import { HeaderRoot } from "./components/header/HeaderRoot";
 import "./index.css"
 export function App() {
   return (
-    <div className="h-screen w-screen px-5 sm:px-24">
+    <div className="flex flex-col flex-wrap min-h-screen max-w-screen px-5 md:px-12 lg:px-24">
       <HeaderRoot></HeaderRoot>
       <div className="
-        grid gap-x-28 place-items-start
-        grid-areas-card-mobile py-7  h-[710px] 
-        sm:grid-areas-card-desktop sm:py-16 sm:h-[515px]" 
+        grid w-full gap-x-28 gap-y-6 justify-items-stretch items-center
+        grid-areas-card-mobile py-7
+        md:py-16
+        lg:grid-areas-card-desktop lg:py-16" 
       >
+        {/* <div className="
+          [grid-area:title]  
+          text-3xl
+          sm:[font-size: 10vw] 
+        ">
+          Navigating the digital landscape for success
+        </div> */}
+        {/* <div className="
+          [grid-area:title]  
+          text-3xl
+          sm:text-6xl 
+          md:w-4/5
+          lg:w-3/4 
+        ">
+          Navigating the digital landscape for success
+        </div> */}
         <div className="
-          [grid-area:title] w-full 
-          text-4xl
-          sm:text-6xl
+          [grid-area:title]  
+          text-responsive-title max-w-xl
         ">
           Navigating the digital landscape for success
         </div>
-        <div className="[grid-area:subtitle]">
+        <p className="[grid-area:subtitle] text-responsive-paragraph max-w-xl">
           Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
-        </div>
-        <button className="[grid-area:button]">Book a consultation</button>
-        <img src="/public/assets/megafone.svg" alt="" className="[grid-area:image]" />
+        </p>
+        <Button/>
+        <img src="/public/assets/megafone.svg" alt="" className="
+          [grid-area:image] 
+          w-fit" 
+        />
       </div>
+
+      
     </div>
   )
 }

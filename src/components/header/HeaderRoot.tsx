@@ -4,9 +4,9 @@ export function HeaderRoot(){
             <img 
                 src="/public/assets/logo.svg" 
                 alt="" 
-                className="w-36 sm:w-56"    
+                className="w-36 md:w-56"    
             />
-            <div className="space-x-10 hidden sm:block">
+            <div className="space-x-10 hidden lg:block">
                 <button>About Us</button>
                 <button>Services</button>
                 <button>Use Cases</button>

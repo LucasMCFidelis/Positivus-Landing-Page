@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: "Space Grotesk"
+      },
+      fontSize: {
+        'responsive-paragraph': 'clamp(0.8rem, 1rem, 1.5rem)',
+        'responsive-title': 'clamp(2rem, 8vw, 3.5rem)',
+      },
+    },
   },
   plugins: [
     require('@savvywombat/tailwindcss-grid-areas'),
