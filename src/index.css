@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  min-width: 0;
+}
+
+@layer utilities {
+  .grid-areas-card-mobile {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "image"
+      "subtitle"
+      "button";
+    grid-template-columns: 1fr; /* Adicionado para definir as colunas */
+    grid-template-rows: auto; /* Adicionado para definir as linhas */
+  }
+  .grid-areas-card-desktop {
+    display: grid;
+    grid-template-areas:
+      "title image"
+      "subtitle image"
+      "button image";
+    grid-template-columns: 1fr 1fr; /* Adicionado para definir as colunas */
+    grid-template-rows: auto; /* Adicionado para definir as linhas */
+  }
+}
