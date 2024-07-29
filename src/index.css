@@ -24,7 +24,7 @@
       "title image"
       "subtitle image"
       "button image";
-    grid-template-columns: 1fr 1fr; /* Adicionado para definir as colunas */
+    grid-template-columns: 52% 1fr; /* Adicionado para definir as colunas */
     grid-template-rows: auto; /* Adicionado para definir as linhas */
   }
   .grid-areas-desktop-service {

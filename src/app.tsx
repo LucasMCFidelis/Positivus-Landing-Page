@@ -6,18 +6,20 @@ export function App() {
     <div className="flex flex-col w-full px-5 md:px-12 lg:px-24">
       <HeaderRoot></HeaderRoot>
       <div className="
-        grid w-full gap-x-28 gap-y-6 justify-items-stretch items-center
+        grid w-full gap-x-28 gap-y-6 justify-items-start items-center
         grid-areas-card-mobile py-7
         md:py-16
         lg:grid-areas-card-desktop lg:py-16"
       >
         <div className="
           [grid-area:title]  
-          text-responsive-title max-w-xl
+          text-title-1-mobile 
+          md:text-title-1-desktop
         ">
           Navigating the digital landscape for success
         </div>
-        <p className="[grid-area:subtitle] text-responsive-paragraph max-w-xl">
+        <p className="[grid-area:subtitle] text-paragraph-mobile 
+        lg:text-paragraph-desktop max-w-xl">
           Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
         </p>
         <Button />
@@ -26,13 +28,24 @@ export function App() {
           w-fit"
         />
       </div>
-      <div className="w-full flex flex-wrap flex-col sm:flex-row items-center justify-center gap-6">
-        <div className=" min-w-80 w-full max-w-full
+
+      <div className="flex flex-col items-center justify-start gap-5 md:gap-10 mb-20 md:flex-row">
+        <h2 className="text-title-2-mobile md:text-title-2-desktop bg-lime-400 rounded-lg p-2">
+          Services
+        </h2>
+        <p className="text-paragraph-mobile lg:text-paragraph-desktop w-fit max-w-xl">
+          At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
+        </p>
+      </div>
+
+      <div className="w-full flex flex-wrap flex-col sm:flex-row y
+      items-center justify-center gap-6">
+        <div className="min-w-80 max-w-full space-x-7 space-y-7
         justify-items-start items-baseline bg-gray-300 rounded-xl 
         grid-areas-mobile-service p-6 
         lg:grid-areas-desktop-service lg:h-80 lg:w-[550px] lg:items-center lg:px-14 "
-      >
-          <h2 className="[grid-area:title] bg-lime-600 w-fit rounded-md text-responsive-subtitle">
+        >
+          <h2 className="[grid-area:title] bg-lime-600 w-fit rounded-md text-title-3-mobile md:text-title-3-desktop">
             Search engine <br />
             optimization
           </h2>
@@ -43,16 +56,16 @@ export function App() {
             </svg>
             <p className="text-responsive-paragraph hidden sm:block">Learn more</p>
           </a>
-          <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt=""/></div>
+          <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt="" /></div>
         </div>
 
-        <div className=" min-w-80 w-full max-w-full
+        <div className="min-w-80 max-w-full space-x-7 space-y-7
         justify-items-start items-baseline bg-gray-300 rounded-xl 
         grid-areas-mobile-service p-6 
         
         lg:grid-areas-desktop-service lg:h-80 lg:w-[550px] lg:items-center lg:px-14 "
-      >
-          <h2 className="[grid-area:title] bg-lime-600 w-fit rounded-md text-responsive-subtitle">
+        >
+          <h2 className="[grid-area:title] bg-lime-600 w-fit rounded-md text-title-3-mobile md:text-title-3-desktop">
             Search engine <br />
             optimization
           </h2>
@@ -63,16 +76,16 @@ export function App() {
             </svg>
             <p className="text-responsive-paragraph hidden sm:block">Learn more</p>
           </a>
-          <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt=""/></div>
+          <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt="" /></div>
         </div>
 
-        <div className=" min-w-80 w-full max-w-full
+        <div className="min-w-80 max-w-full space-x-7 space-y-7
         justify-items-start items-baseline bg-gray-300 rounded-xl 
         grid-areas-mobile-service p-6 
         
         lg:grid-areas-desktop-service lg:h-80 lg:w-[550px] lg:items-center lg:px-14 "
-      >
-          <h2 className="[grid-area:title] bg-lime-600 w-fit rounded-md text-responsive-subtitle">
+        >
+          <h2 className="[grid-area:title] bg-lime-600 w-fit rounded-md text-title-3-mobile md:text-title-3-desktop">
             Search engine <br />
             optimization
           </h2>
@@ -83,16 +96,16 @@ export function App() {
             </svg>
             <p className="text-responsive-paragraph hidden sm:block">Learn more</p>
           </a>
-          <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt=""/></div>
+          <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt="" /></div>
         </div>
 
-        <div className=" min-w-80 w-full max-w-full
+        <div className="min-w-80 max-w-full space-x-7 space-y-7
         justify-items-start items-baseline bg-gray-300 rounded-xl 
         grid-areas-mobile-service p-6 
         
         lg:grid-areas-desktop-service lg:h-80 lg:w-[550px] lg:items-center lg:px-14 "
-      >
-          <h2 className="[grid-area:title] bg-lime-600 w-fit rounded-md text-responsive-subtitle">
+        >
+          <h2 className="[grid-area:title] bg-lime-600 w-fit rounded-md text-title-3-mobile md:text-title-3-desktop">
             Search engine <br />
             optimization
           </h2>
@@ -103,9 +116,9 @@ export function App() {
             </svg>
             <p className="text-responsive-paragraph hidden sm:block">Learn more</p>
           </a>
-          <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt=""/></div>
+          <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt="" /></div>
         </div>
-      </div>      
+      </div>
     </div>
   )
 }
