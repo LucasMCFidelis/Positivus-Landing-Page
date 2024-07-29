@@ -22,6 +22,12 @@ export default {
         'paragraph-desktop': '1.3vw',
         'paragraph-mobile': 'clamp(1rem, 2vw , 1.5rem)',
       },
+      boxShadow:{
+        'base': '0px 5px 0px #191A23;'
+      },
+      borderColor:{
+        'base': '#191A23'
+      }
     },
   },
   plugins: [
