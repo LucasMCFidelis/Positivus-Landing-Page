@@ -6,14 +6,14 @@ export function HeaderRoot(){
                 alt="" 
                 className="w-36 md:w-56"    
             />
-            <div className="space-x-10 hidden lg:block">
-                <button>About Us</button>
-                <button>Services</button>
-                <button>Use Cases</button>
-                <button>Pricing</button>
-                <button>Blog</button>
-                <button>Request a quotes</button>
-            </div>
+            <nav className="space-x-10 hidden text-xl xl:block">
+                <a>About Us</a>
+                <a>Services</a>
+                <a>Use Cases</a>
+                <a>Pricing</a>
+                <a>Blog</a>
+                <a>Request a quotes</a>
+            </nav>
         </header>
     )
 }

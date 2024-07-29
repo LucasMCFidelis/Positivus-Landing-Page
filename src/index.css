@@ -40,7 +40,7 @@
     grid-template-areas:
       "title title"
       "link image";
-    grid-template-columns: 1fr 1fr; /* Adicionado para definir as colunas */
-    grid-template-rows: 30% 1fr; /* Adicionado para definir as linhas */
+    grid-template-columns: 40% 1fr; /* Adicionado para definir as colunas */
+    grid-template-rows: 20% 1fr; /* Adicionado para definir as linhas */
   }
 }
