@@ -48,7 +48,7 @@ export function Services() {
                 <ServiceCard
                     title="Analytics and Tracking"
                     bgCard="tertiary" 
-                    bgTitle="white"
+                    bgTitle="green"
                     styleLink="white"
                     pathImage="/public/assets/icons-services/analytics.svg"
                 />

@@ -22,7 +22,7 @@ export function App() {
         </div>
         <p className="[grid-area:subtitle] text-paragraph-mobile 
         lg:text-paragraph-desktop max-w-xl">
-          
+          Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
         </p>
         <Button />
         <img src="/public/assets/megafone.svg" alt="" className="
@@ -36,6 +36,22 @@ export function App() {
       <Card.Header
         title="Case Studies"
         description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
+      />
+      <Card.Header
+        title="Our Working Process"
+        description="Step-by-Step Guide to Achieving Your Business Goals"
+      />
+      <Card.Header
+        title="Team"
+        description="Meet the skilled and experienced team behind our successful digital marketing strategies"
+      />
+      <Card.Header
+        title="Testimonials"
+        description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
+      />
+      <Card.Header
+        title="Contact Us"
+        description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
       />
     </div>
   )
