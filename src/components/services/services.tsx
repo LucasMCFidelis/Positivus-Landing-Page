@@ -12,9 +12,21 @@ export function Services() {
       items-center justify-center gap-6">
                 <ServiceCard
                     title="Search engine optimization"
+                    bgCard="primary" 
+                    bgTitle="green"
+                    styleLink="dark"    
                 />
                 <ServiceCard
                     title="Search engine second"
+                    bgCard="secondary" 
+                    bgTitle="white"
+                    styleLink="dark"    
+                />
+                <ServiceCard
+                    title="Search engine second"
+                    bgCard="tertiary" 
+                    bgTitle="white"
+                    styleLink="white"    
                 />
             </div>
         </>
