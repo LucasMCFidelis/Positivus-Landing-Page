@@ -14,19 +14,43 @@ export function Services() {
                     title="Search engine optimization"
                     bgCard="primary" 
                     bgTitle="green"
-                    styleLink="dark"    
+                    styleLink="dark"
+                    pathImage= "/public/assets/icons-services/search.svg"
                 />
                 <ServiceCard
-                    title="Search engine second"
+                    title="Pay-per-click advertising"
                     bgCard="secondary" 
                     bgTitle="white"
-                    styleLink="dark"    
+                    styleLink="dark"
+                    pathImage="/public/assets/icons-services/advertising.svg"
                 />
                 <ServiceCard
-                    title="Search engine second"
+                    title="Social Media Marketing"
                     bgCard="tertiary" 
                     bgTitle="white"
-                    styleLink="white"    
+                    styleLink="white"
+                    pathImage="/public/assets/icons-services/marketing.svg"
+                />
+                <ServiceCard
+                    title="Email Marketing"
+                    bgCard="primary" 
+                    bgTitle="green"
+                    styleLink="dark"
+                    pathImage= "/public/assets/icons-services/email.svg"
+                />
+                <ServiceCard
+                    title="Content Creation"
+                    bgCard="secondary" 
+                    bgTitle="white"
+                    styleLink="dark"
+                    pathImage="/public/assets/icons-services/content-creation.svg"
+                />
+                <ServiceCard
+                    title="Analytics and Tracking"
+                    bgCard="tertiary" 
+                    bgTitle="white"
+                    styleLink="white"
+                    pathImage="/public/assets/icons-services/analytics.svg"
                 />
             </div>
         </>

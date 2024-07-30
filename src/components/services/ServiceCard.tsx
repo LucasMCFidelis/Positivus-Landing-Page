@@ -5,9 +5,10 @@ interface ServiceCardProps{
     bgCard: "primary" | "secondary" | "tertiary" | undefined
     bgTitle: "white" | "green" | undefined
     styleLink: "white" | "dark" | undefined
+    pathImage: string
 }
 
-export function ServiceCard({title, bgCard, bgTitle, styleLink}: ServiceCardProps) {
+export function ServiceCard({title, bgCard, bgTitle, styleLink, pathImage}: ServiceCardProps) {
     function splitTitle(title: string): [string, string] {
         const lastSpaceIndex = title.lastIndexOf(' ');
         if (lastSpaceIndex === -1) {
@@ -24,7 +25,7 @@ export function ServiceCard({title, bgCard, bgTitle, styleLink}: ServiceCardProp
     const item = tv({
         slots: {
             base: 'min-w-80 max-w-full space-x-7 space-y-7 rounded-xl justify-items-start items-baseline grid-areas-mobile-service p-6 lg:grid-areas-desktop-service lg:h-80 lg:w-[550px] lg:items-center lg:px-14 border border-base shadow-base',
-            titleWrapper: '[grid-area:title]text-title-3-mobile md:text-title-3-desktop font-semibold',
+            titleWrapper: '[grid-area:title] text-title-3-mobile md:text-title-3-desktop font-semibold',
             titleContent: 'rounded-lg py-0.5 px-2 w-fit',
             linkContent: '[grid-area:link] flex items-center gap-3', 
             linkBackground: '', 
@@ -99,7 +100,7 @@ export function ServiceCard({title, bgCard, bgTitle, styleLink}: ServiceCardProp
                 <p className="text-paragraph-mobile 
         lg:text-paragraph-desktop hidden sm:block">Learn more</p>
             </a>
-            <div className="[grid-area:image]"><img src="/public/assets/card1.svg" alt="" /></div>
+            <div className="[grid-area:image]"><img src={pathImage} alt="" /></div>
         </div>
     )
 }

@@ -27,7 +27,7 @@ export function App() {
         <Button />
         <img src="/public/assets/megafone.svg" alt="" className="
           [grid-area:image] 
-          w-fit"
+          w-fit place-self-center"
         />
       </div>
 
