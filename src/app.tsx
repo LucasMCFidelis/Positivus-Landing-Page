@@ -36,22 +36,27 @@ export function App() {
       <Card.Header
         title="Case Studies"
         description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
+        paragraphSize="lg"
       />
       <Card.Header
         title="Our Working Process"
         description="Step-by-Step Guide to Achieving Your Business Goals"
+        paragraphSize="sm"
       />
       <Card.Header
         title="Team"
         description="Meet the skilled and experienced team behind our successful digital marketing strategies"
+        paragraphSize="md"
       />
       <Card.Header
         title="Testimonials"
         description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
+        paragraphSize="md"
       />
       <Card.Header
         title="Contact Us"
         description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
+        paragraphSize="sm"
       />
     </div>
   )

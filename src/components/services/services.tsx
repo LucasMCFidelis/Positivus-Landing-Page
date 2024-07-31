@@ -7,6 +7,7 @@ export function Services() {
             <Card.Header
                 title="Services"
                 description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
+                paragraphSize="lg"
             />
             <div className="w-full flex flex-wrap flex-col sm:flex-row y
       items-center justify-center gap-6">
