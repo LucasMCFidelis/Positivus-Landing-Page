@@ -1,8 +1,30 @@
+import { tv } from "tailwind-variants";
 import { Button } from "./components/button";
 import { Card } from "./components/cards";
 import { HeaderRoot } from "./components/header/HeaderRoot";
 import { Services } from "./components/services/services";
 import "./index.css"
+
+export const paragraph = tv({
+  base: 'text-paragraph-mobile md:text-paragraph-desktop md:text-left ',
+  variants: {
+      size: {
+          sm: 'w-full md:w-[23vw]',
+          md: 'w-full md:w-[34vw]',
+          lg: 'w-full md:w-[42vw]',
+          full: 'w-full'
+      },
+      alignTextMobile: {
+        left: 'text-left',
+        center: 'text-center'
+      }
+  },
+  defaultVariants:{
+      size: 'full',
+      alignTextMobile: 'center'
+  }
+})
+
 export function App() {
   return (
     <div className="flex flex-col w-full px-5 space-y-12 md:px-12 lg:px-24">
@@ -20,8 +42,7 @@ export function App() {
         ">
           Navigating the digital landscape for success
         </div>
-        <p className="[grid-area:subtitle] text-paragraph-mobile 
-        lg:text-paragraph-desktop max-w-xl">
+        <p className={`[grid-area:subtitle] ${paragraph({ size: "md", alignTextMobile: "left" })}`}>
           Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
         </p>
         <Button />
