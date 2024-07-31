@@ -8,12 +8,12 @@ interface HeaderCardProps{
 
 export function HeaderCard({title, description, paragraphSize}: HeaderCardProps) {
     const paragraph = tv({
-        base: 'text-paragraph-mobile lg:text-paragraph-desktop',
+        base: 'text-paragraph-mobile md:text-paragraph-desktop text-center md:text-left ',
         variants: {
             size: {
-                sm: 'w-[310px]',
-                md: 'w-[470px]',
-                lg: 'w-[575px]',
+                sm: 'w-full md:w-[23vw]',
+                md: 'w-full md:w-[34vw]',
+                lg: 'w-full md:w-[42vw]',
                 full: 'w-full'
             }
         },

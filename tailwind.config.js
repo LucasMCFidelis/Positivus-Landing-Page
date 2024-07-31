@@ -20,7 +20,7 @@ export default {
         'title-3-desktop': 'clamp(1.5rem, 2vw , 1.8rem)',
         'title-3-mobile': '5vw',
         'paragraph-desktop': '1.3vw',
-        'paragraph-mobile': 'clamp(1rem, 2vw , 1.5rem)',
+        'paragraph-mobile': 'clamp(1rem, 4.5vw , 1.5rem)',
       },
       boxShadow:{
         'base': '0px 5px 0px #191A23;'
