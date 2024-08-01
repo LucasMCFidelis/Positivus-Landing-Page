@@ -1,3 +1,5 @@
+import { Button } from "../button";
+
 export function HeaderRoot(){
     return (
         <header className="w-full h-auto flex justify-between items-center mt-7 sm:mt-14">
@@ -12,7 +14,7 @@ export function HeaderRoot(){
                 <a>Use Cases</a>
                 <a>Pricing</a>
                 <a>Blog</a>
-                <a>Request a quotes</a>
+                <Button text={"Request a quotes"} colorBG={"transparent"}></Button>
             </nav>
         </header>
     )
