@@ -37,17 +37,13 @@ export function App() {
       />
 
       <Marquee>
-        <div className="flex flex-wrap lg:flex-nowrap grayscale">
-          <div className="flex items-center gap-9 lg:gap-24">
-            <img src="/public/assets/logos-marquee/amazon.svg" alt="" className="w-fit h-fit lg:ml-24" />
-            <img src="/public/assets/logos-marquee/dribbble.svg" alt="" className="w-fit h-fit" />
-            <img src="/public/assets/logos-marquee/hubspot.svg" alt="" className="w-fit h-fit" />
-          </div>
-          <div className="flex items-center gap-9 lg:gap-24">
-            <img src="/public/assets/logos-marquee/notion.svg" alt="" className="w-fit h-fit ml-9 lg:ml-24" />
-            <img src="/public/assets/logos-marquee/netflix.svg" alt="" className="w-fit h-fit" />
-            <img src="/public/assets/logos-marquee/zoom.svg" alt="" className="w-fit h-fit" />
-          </div>
+        <div className="grid grid-cols-3 lg:flex lg:flex-nowrap grayscale items-center justify-items-start">
+          <img src="/public/assets/logos-marquee/amazon.svg" alt="Amazon Logo" className="h-auto px-8 lg:px-14" />
+          <img src="/public/assets/logos-marquee/dribbble.svg" alt="Dribbble Logo" className="h-auto px-8 lg:px-14" />
+          <img src="/public/assets/logos-marquee/hubspot.svg" alt="Hubspot Logo" className="h-auto px-8 lg:px-14" />
+          <img src="/public/assets/logos-marquee/notion.svg" alt="Notion Logo" className="h-auto px-8 ml-16 lg:ml-0 lg:px-14" />
+          <img src="/public/assets/logos-marquee/netflix.svg" alt="Netflix Logo" className="h-auto px-8 ml-16 lg:ml-0 lg:px-14" />
+          <img src="/public/assets/logos-marquee/zoom.svg" alt="Zoom Logo" className="h-auto px-8 ml-16 lg:ml-0 lg:px-14" />
         </div>
       </Marquee>
 
