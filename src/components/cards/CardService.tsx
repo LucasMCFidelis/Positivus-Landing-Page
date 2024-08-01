@@ -1,6 +1,6 @@
 import {tv} from 'tailwind-variants'
 
-interface ServiceCardProps{
+interface CardServiceProps{
     title: string
     bgCard: "primary" | "secondary" | "tertiary" | undefined
     bgTitle: "white" | "green" | undefined
@@ -8,7 +8,7 @@ interface ServiceCardProps{
     pathImage: string
 }
 
-export function ServiceCard({title, bgCard, bgTitle, styleLink, pathImage}: ServiceCardProps) {
+export function CardService({title, bgCard, bgTitle, styleLink, pathImage}: CardServiceProps) {
     function splitTitle(title: string): [string, string] {
         const lastSpaceIndex = title.lastIndexOf(' ');
         if (lastSpaceIndex === -1) {

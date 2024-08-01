@@ -23,7 +23,7 @@ export function MarketingCard({ paragraphSize, alignTextMobile }: MarketingCardP
             <p className={`[grid-area:subtitle] ${paragraph({ size: paragraphSize, alignTextMobile: alignTextMobile })}`}>
                 Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
             </p>
-            <Button text={"Book a consultation"} />
+            <Button text={"Book a consultation"} colorBG={"dark"} />
             <img src="/public/assets/megafone.svg" alt="" className="[grid-area:image] w-fit place-self-center"
             />
         </div>

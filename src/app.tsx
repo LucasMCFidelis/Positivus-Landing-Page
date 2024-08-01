@@ -1,10 +1,11 @@
 import { tv } from "tailwind-variants";
 import { Card } from "./components/cards";
 import { HeaderRoot } from "./components/header/HeaderRoot";
-import { Services } from "./components/services/services";
+import { Services } from "./components/sectionPage/services";
 import "./index.css"
 import { MarketingCard } from "./components/marketingCard";
 import Marquee from "react-fast-marquee";
+import { HeaderMain } from "./components/sectionPage/headerMain";
 
 export const paragraph = tv({
   base: 'text-paragraph-mobile lg:text-paragraph-desktop lg:text-left ',
@@ -29,7 +30,7 @@ export const paragraph = tv({
 export function App() {
   return (
     <div className="flex flex-col w-full px-5 space-y-12 md:px-12 lg:px-24">
-      <HeaderRoot></HeaderRoot>
+      <HeaderMain></HeaderMain>
 
       <MarketingCard
         paragraphSize="md"

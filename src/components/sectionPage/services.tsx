@@ -1,5 +1,5 @@
 import { Card } from "../cards";
-import { ServiceCard } from "./ServiceCard";
+
 
 export function Services() {
     return (
@@ -11,42 +11,42 @@ export function Services() {
             />
             <div className="w-full flex flex-wrap flex-col sm:flex-row y
       items-center justify-center gap-6">
-                <ServiceCard
+                <Card.Service
                     title="Search engine optimization"
                     bgCard="primary" 
                     bgTitle="green"
                     styleLink="dark"
                     pathImage= "/public/assets/icons-services/search.svg"
                 />
-                <ServiceCard
+                <Card.Service
                     title="Pay-per-click advertising"
                     bgCard="secondary" 
                     bgTitle="white"
                     styleLink="dark"
                     pathImage="/public/assets/icons-services/advertising.svg"
                 />
-                <ServiceCard
+                <Card.Service
                     title="Social Media Marketing"
                     bgCard="tertiary" 
                     bgTitle="white"
                     styleLink="white"
                     pathImage="/public/assets/icons-services/marketing.svg"
                 />
-                <ServiceCard
+                <Card.Service
                     title="Email Marketing"
                     bgCard="primary" 
                     bgTitle="green"
                     styleLink="dark"
                     pathImage= "/public/assets/icons-services/email.svg"
                 />
-                <ServiceCard
+                <Card.Service
                     title="Content Creation"
                     bgCard="secondary" 
                     bgTitle="white"
                     styleLink="dark"
                     pathImage="/public/assets/icons-services/content-creation.svg"
                 />
-                <ServiceCard
+                <Card.Service
                     title="Analytics and Tracking"
                     bgCard="tertiary" 
                     bgTitle="green"
