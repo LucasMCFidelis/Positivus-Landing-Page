@@ -11,13 +11,12 @@ export function MarketingCard({ paragraphSize, alignTextMobile }: MarketingCardP
         <div className="
         grid w-full gap-y-6 justify-items-start items-center
         grid-areas-card-mobile
-       
         lg:grid-areas-card-desktop"
         >
             <div className="
                 [grid-area:title]  
                 text-title-1-mobile 
-                md:text-title-1-desktop
+                lg:text-title-1-desktop
             ">
                 Navigating the digital landscape for success
             </div>
