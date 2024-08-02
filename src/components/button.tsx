@@ -8,7 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ text, colorBG,...rest }: ButtonProps) {
   const button = tv({
-    base: 'w-full lg:w-fit py-5 px-8 rounded-xl',
+    base: 'w-full lg:w-fit text-xl py-5 px-8 rounded-xl',
     variants: {
       color: {
         dark: 'bg-gray-900 text-gray-200',

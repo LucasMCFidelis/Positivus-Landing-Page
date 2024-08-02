@@ -1,6 +1,5 @@
 import { tv } from "tailwind-variants";
 import { Card } from "./components/cards";
-import { HeaderRoot } from "./components/header/HeaderRoot";
 import { Services } from "./components/sectionPage/services";
 import "./index.css"
 import { MarketingCard } from "./components/marketingCard";
@@ -65,6 +64,12 @@ export function App() {
         description="Meet the skilled and experienced team behind our successful digital marketing strategies"
         paragraphSize="md"
       />
+      
+      <Card.Wrapper bgColor="secondary" size="full">
+        <p>aaaaaaaaaa</p>
+      </Card.Wrapper>
+      
+
       <Card.Header
         title="Testimonials"
         description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
