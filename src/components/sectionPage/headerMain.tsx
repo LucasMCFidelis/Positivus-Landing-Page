@@ -6,7 +6,7 @@ export function HeaderMain() {
     return (
             <Header.Root>
                 <Card.Logo
-                    styleLogo="dark"
+                    styleLogo="black"
                 />
                 <div className="flex items-center space-x-10">
                     <Header.Nav/>
