@@ -23,10 +23,10 @@ export default {
         'paragraph-mobile': 'clamp(1rem, 4.5vw , 1.5rem)',
       },
       boxShadow:{
-        'base': '0px 5px 0px #191A23;'
+        'basic': '0px 5px 0px #191A23;'
       },
       borderColor:{
-        'base': '#191A23'
+        'basic': '#191A23'
       }
     },
   },
