@@ -2,14 +2,15 @@ import { ReactNode } from 'react'
 import { tv } from 'tailwind-variants'
 
 interface CardWrapperProps {
-    bgColor: "primary" | "secondary" | "tertiary" | undefined
-    size: "sm" | "md" | "lg" | "full" 
+    bgColor?: "primary" | "secondary" | "tertiary" | undefined
+    size?: "sm" | "md" | "lg" | "full" 
+    rounded?: "sm" | "lg"
     children: ReactNode
 }
 
-export function CardWrapper({ bgColor, size, children }: CardWrapperProps) {
+export function CardWrapper({ bgColor, size, rounded, children }: CardWrapperProps) {
     const item = tv({
-        base: 'min-w-80 max-w-full space-x-7 space-y-7 rounded-xl justify-items-start items-baseline grid-areas-mobile-service p-6 lg:grid-areas-desktop-service lg:h-80 lg:w-[550px] lg:items-center lg:px-14 border border-base shadow-base',
+        base: 'w-full justify-items-start items-baseline p-6  lg:items-center lg:px-14 border border-base shadow-base',
 
         variants: {
             bgCard: {
@@ -17,17 +18,26 @@ export function CardWrapper({ bgColor, size, children }: CardWrapperProps) {
                 secondary: 'bg-[#B9FF66]',
                 tertiary: 'bg-[#191A23]'
             },
-            sizeCard: {
+            heightCard: {
                 sm: '',
                 md: '',
-                lg: '',
-                full: 'w-full'
+                lg: 'h-min lg:h-80',
+                full: 'h-full'
+            },
+            roundedCard: {
+                sm: 'rounded-xl',
+                lg: 'rounded-[45px]'
             }
+        },
+        defaultVariants: {
+            bgCard: 'primary',
+            heightCard: 'full',
+            roundedCard: 'sm'
         }
     })
 
     return (
-        <div className={item({bgCard: bgColor, sizeCard: size})}>
+        <div className={item({bgCard: bgColor, heightCard: size, roundedCard: rounded}) }>
             {children}
         </div>
     )

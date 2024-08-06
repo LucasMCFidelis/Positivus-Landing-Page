@@ -65,9 +65,35 @@ export function App() {
         paragraphSize="md"
       />
       
-      <Card.Wrapper bgColor="secondary" size="full">
-        <p>aaaaaaaaaa</p>
-      </Card.Wrapper>
+      <div className="grid grid-cols-1 gap-7 lg:grid-cols-3 lg:grid-rows-2 lg:gap-10">
+        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+          <p>aaaaaaaaaa</p>
+        </Card.Wrapper>
+        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
+          <p>aaaaaaaaaa</p>
+        </Card.Wrapper>
+        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
+          <p>aaaaaaaaaa</p>
+        </Card.Wrapper>
+        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
+          <p>aaaaaaaaaa</p>
+        </Card.Wrapper>
+        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
+          <p>aaaaaaaaaa</p>
+        </Card.Wrapper>
+        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
+          <p>aaaaaaaaaa</p>
+        </Card.Wrapper>
+      </div>
       
 
       <Card.Header
