@@ -56,7 +56,7 @@ export function Services() {
                     pathImage="/public/assets/icons-services/analytics.svg"
                 />
             </div>
-            <div className="w-full ">
+            <div className="w-full">
                 <Card.Wrapper bgColor="primary" border="none" size="md" className="relative h-80 mt-24 mb-24">
                     <div className="h-full flex flex-col gap-6 justify-center items-start">
                         <h3 className="text-title-3-mobile md:text-title-3-desktop font-semibold">Let’s make things happen</h3>
