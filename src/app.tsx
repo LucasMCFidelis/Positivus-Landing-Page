@@ -64,7 +64,7 @@ export function App() {
         paragraphSize="md"
       />
 
-      
+      <Section.Team/>
 
       <Card.Header
         title="Testimonials"
