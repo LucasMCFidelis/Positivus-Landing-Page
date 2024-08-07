@@ -2,7 +2,7 @@ import { Button } from "../button";
 import { Card } from "../cards";
 import { Header } from "../header";
 
-export function HeaderMain() {
+export function SectionHeaderMain() {
     return (
             <Header.Root>
                 <Card.Logo

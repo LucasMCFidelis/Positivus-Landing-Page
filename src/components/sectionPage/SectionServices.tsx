@@ -3,7 +3,7 @@ import { Button } from "../button";
 import { Card } from "../cards";
 
 
-export function Services() {
+export function SectionServices() {
     return (
         <>
             <Card.Header

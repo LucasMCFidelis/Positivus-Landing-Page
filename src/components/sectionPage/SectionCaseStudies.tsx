@@ -15,7 +15,7 @@ const CaseStudyCard = ({ description }: { description: string }) => (
     </div>
 )
 
-export function CaseStudies() {
+export function SectionCaseStudies() {
     return (
         <div className="w-full ">
             <Card.Header

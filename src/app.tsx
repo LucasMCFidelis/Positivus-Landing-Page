@@ -1,11 +1,9 @@
 import { tv } from "tailwind-variants";
 import { Card } from "./components/cards";
-import { Services } from "./components/sectionPage/services";
 import "./index.css"
 import { MarketingCard } from "./components/marketingCard";
 import Marquee from "react-fast-marquee";
-import { HeaderMain } from "./components/sectionPage/headerMain";
-import { CaseStudies } from "./components/sectionPage/caseStudy";
+import { Section } from "./components/sectionPage";
 
 export const paragraph = tv({
   base: 'text-paragraph-mobile lg:text-paragraph-desktop lg:text-left ',
@@ -30,7 +28,7 @@ export const paragraph = tv({
 export function App() {
   return (
     <div className="flex flex-col w-full px-5 space-y-12 md:px-12 lg:px-24">
-      <HeaderMain></HeaderMain>
+      <Section.HeaderMain/>
 
       <MarketingCard
         paragraphSize="md"
@@ -51,9 +49,9 @@ export function App() {
         </div>
       </Marquee>
 
-      <Services />
+      <Section.Services/>
 
-      <CaseStudies/>
+      <Section.CaseStudies/>
 
       <Card.Header
         title="Our Working Process"
@@ -66,36 +64,7 @@ export function App() {
         paragraphSize="md"
       />
 
-      <div className="grid grid-cols-1 gap-7 lg:grid-cols-3 lg:gap-10">
-        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-          <p>aaaaaaaaaa</p>
-        </Card.Wrapper>
-        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
-          <p>aaaaaaaaaa</p>
-        </Card.Wrapper>
-        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
-          <p>aaaaaaaaaa</p>
-        </Card.Wrapper>
-        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
-          <p>aaaaaaaaaa</p>
-        </Card.Wrapper>
-        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
-          <p>aaaaaaaaaa</p>
-        </Card.Wrapper>
-        <Card.Wrapper bgColor="primary" size="lg" rounded="lg">
-          <p>aaaaaaaaaa</p>
-        </Card.Wrapper>
-      </div>
-
+      
 
       <Card.Header
         title="Testimonials"
