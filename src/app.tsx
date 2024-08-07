@@ -27,50 +27,46 @@ export const paragraph = tv({
 
 export function App() {
   return (
-    <div className="flex flex-col w-full px-5 space-y-12 md:px-12 lg:px-24">
-      <Section.HeaderMain/>
-
-      <MarketingCard
-        paragraphSize="md"
-        alignTextMobile="left"
-      />
-
-      <Marquee>
-        <div className="grid grid-cols-3 lg:flex lg:flex-nowrap grayscale items-center justify-items-start">
-          {["amazon", "dribbble", "hubspot", "notion", "netflix", "zoom"].map((logo, idx) => (
-            <img
-              key={idx}
-              src={`/public/assets/logos-marquee/${logo}.svg`} 
-              alt= {`${logo} Logo`} 
-              className={`h-auto lg:px-14 ${idx >= 3 ? "ml-16 lg:ml-0" : ""}`}
-            />
-          ))
-          }
-        </div>
-      </Marquee>
-
-      <Section.Services/>
-
-      <Section.CaseStudies/>
-
-      <Card.Header
-        title="Our Working Process"
-        description="Step-by-Step Guide to Achieving Your Business Goals"
-        paragraphSize="sm"
-      />
-
-      <Section.Team/>
-
-      <Card.Header
-        title="Testimonials"
-        description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
-        paragraphSize="md"
-      />
-      <Card.Header
-        title="Contact Us"
-        description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
-        paragraphSize="sm"
-      />
-    </div>
+    <main className="">
+      <div className="flex flex-col w-full px-5 space-y-12 md:px-12 lg:px-24">
+        <Section.HeaderMain/>
+        <MarketingCard
+          paragraphSize="md"
+          alignTextMobile="left"
+        />
+        <Marquee>
+          <div className="grid grid-cols-3 lg:flex lg:flex-nowrap grayscale items-center justify-items-start">
+            {["amazon", "dribbble", "hubspot", "notion", "netflix", "zoom"].map((logo, idx) => (
+              <img
+                key={idx}
+                src={`/public/assets/logos-marquee/${logo}.svg`}
+                alt= {`${logo} Logo`}
+                className={`h-auto lg:px-14 ${idx >= 3 ? "ml-16 lg:ml-0" : ""}`}
+              />
+            ))
+            }
+          </div>
+        </Marquee>
+        <Section.Services/>
+        <Section.CaseStudies/>
+        <Card.Header
+          title="Our Working Process"
+          description="Step-by-Step Guide to Achieving Your Business Goals"
+          paragraphSize="sm"
+        />
+        <Section.Team/>
+        <Card.Header
+          title="Testimonials"
+          description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
+          paragraphSize="md"
+        />
+        <Card.Header
+          title="Contact Us"
+          description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
+          paragraphSize="sm"
+        />
+      </div>
+        <Section.Footer/>
+    </main>
   )
 }
