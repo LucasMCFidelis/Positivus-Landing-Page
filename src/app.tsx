@@ -58,11 +58,6 @@ export function App() {
         description="Step-by-Step Guide to Achieving Your Business Goals"
         paragraphSize="sm"
       />
-      <Card.Header
-        title="Team"
-        description="Meet the skilled and experienced team behind our successful digital marketing strategies"
-        paragraphSize="md"
-      />
 
       <Section.Team/>
 
