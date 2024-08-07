@@ -1,14 +1,23 @@
+import { paragraph } from "../../app";
 import { Card } from "../cards";
 
-const TeamCard = () => (
+interface TeamCardProps {
+    name: string
+    position: string
+    pathImage: string
+    altImage: string
+    resumePerson: string
+}
+
+const TeamCard = ({ name, position, pathImage, altImage, resumePerson }: TeamCardProps) => (
     <Card.Wrapper bgColor="primary" size="full" rounded="lg" className="flex flex-col gap-y-6">
         <div className="flex justify-start gap-5">
 
-            <img src="/public/assets/image.png" alt="John Smith" className="h-28" />
+            <img src={pathImage} alt={altImage} className="h-28" />
 
             <div className="flex flex-col-reverse justify-between items-end">
 
-                <p><span className="font-semibold">John Smith</span> <br /> CEO and Founder</p>
+                <p className={paragraph({ size: "full" })}><span className="font-semibold">{name}</span> <br /> {position}</p>
                 <svg className="" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="17" cy="17" r="17" fill="black" />
                     <path d="M9.31776 25H12.8131V13.6844H9.31776V25Z" fill="#B9FF66" />
@@ -20,14 +29,48 @@ const TeamCard = () => (
 
         <div className="h-0.5 bg-zinc-300"></div>
 
-        <p>10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy</p>
+        <p>{resumePerson}</p>
     </Card.Wrapper>
 );
 
 export function SectionTeam() {
     return (
         <div className="grid grid-cols-1 gap-7 lg:grid-cols-3 lg:grid-rows-2 lg:gap-10">
-            <TeamCard/>
+            {[
+                {
+                    name: "John Smith",
+                    position: "CEO and Founder",
+                    resume: "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy"
+                },
+                {
+                    name: "Jane Doe",
+                    position: "Director of Operations",
+                    resume: "7+ years of experience in project management and team leadership. Strong organizational and communication skills"
+                },
+                {
+                    name: "Michael Brown",
+                    position: "Senior SEO Specialist",
+                    resume: "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization"
+                },
+                {
+                    name: "Emily Johnson",
+                    position: "Content Creator",
+                    resume: "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis"
+                },
+                {
+                    name: "Brian Williams",
+                    position: "Social Media Specialist",
+                    resume: "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement"
+                },
+                {
+                    name: "Sarah Kim",
+                    position: "PPC Manager",
+                    resume: "2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries"
+                },
+            ].map((person, idx) => (
+                <TeamCard key={idx} name={person.name} position={person.position} pathImage={`/public/assets/profile-team/${person.name}.png`} altImage={person.name} resumePerson={person.resume} />
+            ))
+            }
         </div>
     )
 }
