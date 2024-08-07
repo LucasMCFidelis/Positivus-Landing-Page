@@ -38,12 +38,15 @@ export function App() {
 
       <Marquee>
         <div className="grid grid-cols-3 lg:flex lg:flex-nowrap grayscale items-center justify-items-start">
-          <img src="/public/assets/logos-marquee/amazon.svg" alt="Amazon Logo" className="h-auto lg:px-14" />
-          <img src="/public/assets/logos-marquee/dribbble.svg" alt="Dribbble Logo" className="h-auto lg:px-14" />
-          <img src="/public/assets/logos-marquee/hubspot.svg" alt="Hubspot Logo" className="h-auto lg:px-14" />
-          <img src="/public/assets/logos-marquee/notion.svg" alt="Notion Logo" className="h-auto ml-16 lg:ml-0 lg:px-14" />
-          <img src="/public/assets/logos-marquee/netflix.svg" alt="Netflix Logo" className="h-auto ml-16 lg:ml-0 lg:px-14" />
-          <img src="/public/assets/logos-marquee/zoom.svg" alt="Zoom Logo" className="h-auto ml-16 lg:ml-0 lg:px-14" />
+          {["amazon", "dribbble", "hubspot", "notion", "netflix", "zoom"].map((logo, idx) => (
+            <img
+              key={idx}
+              src={`/public/assets/logos-marquee/${logo}.svg`} 
+              alt= {`${logo} Logo`} 
+              className={`h-auto lg:px-14 ${idx >= 3 ? "ml-16 lg:ml-0" : ""}`}
+            />
+          ))
+          }
         </div>
       </Marquee>
 
