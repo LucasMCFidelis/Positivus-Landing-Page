@@ -34,7 +34,7 @@ export function App() {
   return (
     <main className="">
       <div className="flex flex-col w-full px-5 space-y-12 md:px-12 lg:px-24">
-        <Section.HeaderMain/>
+        <Section.HeaderMain />
         <MarketingCard
           paragraphSize="md"
           alignTextMobile="left"
@@ -45,21 +45,17 @@ export function App() {
               <img
                 key={idx}
                 src={`/public/assets/logos-marquee/${logo}.svg`}
-                alt= {`${logo} Logo`}
+                alt={`${logo} Logo`}
                 className={`w-[25vw] lg:w-[15vw] h-auto lg:px-14 ${idx >= 3 ? "ml-16 lg:ml-0" : ""}`}
               />
             ))
             }
           </div>
         </Marquee>
-        <Section.Services/>
-        <Section.CaseStudies/>
-        <Card.Header
-          title="Our Working Process"
-          description="Step-by-Step Guide to Achieving Your Business Goals"
-          paragraphSize="sm"
-        />
-        <Section.Team/>
+        <Section.Services />
+        <Section.CaseStudies />
+        <Section.WorkingProcess />
+        <Section.Team />
         <Card.Header
           title="Testimonials"
           description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
@@ -71,7 +67,7 @@ export function App() {
           paragraphSize="sm"
         />
       </div>
-        <Section.Footer/>
+      <Section.Footer />
     </main>
   )
 }
