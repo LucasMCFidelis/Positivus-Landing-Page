@@ -25,7 +25,7 @@ export function CardService({ title, bgCard, bgTitle, styleLink, pathImage }: Ca
 
     const item = tv({
         slots: {
-            base: 'min-w-80 max-w-full space-x-7 space-y-7 justify-items-start items-baseline grid-areas-mobile-service lg:grid-areas-desktop-service lg:h-80 lg:w-[550px] lg:items-center border border-base shadow-base',
+            base: 'space-x-7 space-y-7 justify-items-start items-baseline grid-areas-mobile-service min-h-72 lg:grid-areas-desktop-service lg:min-h-80 lg:h-[40vh] lg:w-full lg:items-center border border-base shadow-base',
             titleWrapper: '[grid-area:title] text-title-3-mobile md:text-title-3-desktop font-semibold',
             titleContent: 'rounded-lg py-0.5 px-2 w-fit',
             linkContent: '[grid-area:link] flex items-center gap-3',
@@ -66,7 +66,7 @@ export function CardService({ title, bgCard, bgTitle, styleLink, pathImage }: Ca
     } = item({ bgTitle, styleLink });
 
     return (
-        <CardWrapper bgColor={bgCard} size='md' rounded='sm'
+        <CardWrapper bgColor={bgCard} size='md' rounded='lg'
             className={base()}>
             <div className={titleWrapper()}>
                 <h3 className={titleContent()}>

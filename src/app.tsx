@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 import { Section } from "./components/sectionPage";
 
 export const paragraph = tv({
-  base: 'text-paragraph-mobile lg:text-paragraph-desktop lg:text-left ',
+  base: 'text-paragraph-mobile lg:text-paragraph-desktop',
   variants: {
     size: {
       sm: 'w-full lg:w-[23vw]',
@@ -17,11 +17,16 @@ export const paragraph = tv({
     alignTextMobile: {
       left: 'text-left',
       center: 'text-center'
+    },
+    alignTextDesktop: {
+      left: 'lg:text-left',
+      center: 'lg:text-center'
     }
   },
   defaultVariants: {
     size: 'full',
-    alignTextMobile: 'center'
+    alignTextMobile: 'center',
+    alignTextDesktop: 'left'
   }
 })
 

@@ -24,7 +24,7 @@ export function MarketingCard({ paragraphSize, alignTextMobile }: MarketingCardP
                 Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
             </p>
             <Button text={"Book a consultation"} colorBG={"dark"} />
-            <img src="/public/assets/megafone.svg" alt="" className="[grid-area:image] w-fit place-self-center"
+            <img src="/public/assets/megafone.svg" alt="" className="[grid-area:image] w-full h-full place-self-center"
             />
         </div>
     )

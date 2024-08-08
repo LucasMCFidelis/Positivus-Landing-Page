@@ -22,7 +22,7 @@ const TeamCard = ({ name, position, pathImage, altImage, resumePerson }: TeamCar
                     <path d="M22.4517 25H26V18.7844C26 15.7562 25.3115 13.3656 21.7632 13.3656C20.0685 13.3656 18.9034 14.3219 18.4268 15.225H18.3738V13.6844H15.0374V25H18.5327V19.4219C18.5327 17.9344 18.7975 16.5 20.6511 16.5C22.4517 16.5 22.4517 18.2 22.4517 19.475V25Z" fill="#B9FF66" />
                 </svg>
                 <div className="flex-1 flex items-end">
-                    <p className={`${paragraph({ size: "full" })}`}><span className="font-semibold">{name}</span> <br /> {position}</p>
+                    <p className={`${paragraph({ size: "full", alignTextMobile:"left" })}`}><span className="font-semibold">{name}</span> <br /> {position}</p>
                 </div>
             </div>
         </div>

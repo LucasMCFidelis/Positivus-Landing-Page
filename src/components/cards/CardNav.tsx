@@ -1,4 +1,5 @@
 import { tv } from "tailwind-variants"
+import { paragraph } from "../../app"
 
 export function CardNav({direction}: {direction: 'dynamic' | 'row'}) {
     const nav = tv({
@@ -12,7 +13,7 @@ export function CardNav({direction}: {direction: 'dynamic' | 'row'}) {
     })
 
     return (
-        <nav className={nav({direction: direction})}>
+        <nav className={`${nav({direction: direction})} ${paragraph({size: "lg", alignTextDesktop: "center"})}`}>
             <a>About Us</a>
             <a>Services</a>
             <a>Use Cases</a>

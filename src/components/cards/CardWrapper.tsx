@@ -39,7 +39,7 @@ export function CardWrapper({ bgColor, size, rounded, border, children, classNam
         defaultVariants: {
             bgCard: 'primary',
             heightCard: 'full',
-            roundedCard: 'sm', 
+            roundedCard: 'lg', 
             borderCard: 'basic'
         }
     })

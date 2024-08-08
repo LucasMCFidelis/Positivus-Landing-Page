@@ -19,7 +19,7 @@ export default {
         'title-2-mobile': '6vw',
         'title-3-desktop': 'clamp(1.5rem, 2vw , 1.8rem)',
         'title-3-mobile': '5vw',
-        'paragraph-desktop': '1.3vw',
+        'paragraph-desktop': 'clamp(1.2rem, 1.36vw , 2rem)',
         'paragraph-mobile': 'clamp(1rem, 4.5vw , 1.5rem)',
       },
       boxShadow:{
