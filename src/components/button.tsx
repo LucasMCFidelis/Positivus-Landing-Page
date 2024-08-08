@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from "react"
 import { tv } from "tailwind-variants"
-import clsx from "clsx"
+import { twMerge } from "tailwind-merge"
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string,
@@ -32,7 +32,7 @@ export function Button({ text, colorBG, rounded, children, className, ...rest }:
   return (
     <button
       {...rest}
-      className={clsx(button({ color: colorBG, rounded: rounded }), className)}
+      className={twMerge(button({ color: colorBG, rounded: rounded }), className)}
     >
       {text} 
       {children}

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { tv } from 'tailwind-variants'
-import clsx from 'clsx'
+import { twMerge } from "tailwind-merge"
 
 interface CardWrapperProps {
     bgColor?: "primary" | "secondary" | "tertiary" | undefined
@@ -45,7 +45,7 @@ export function CardWrapper({ bgColor, size, rounded, border, children, classNam
     })
 
     return (
-        <div className={clsx(item({ bgCard: bgColor, heightCard: size, roundedCard: rounded, borderCard: border }), className)}>
+        <div className={twMerge(item({ bgCard: bgColor, heightCard: size, roundedCard: rounded, borderCard: border }), className)}>
             {children}
         </div>
     )
