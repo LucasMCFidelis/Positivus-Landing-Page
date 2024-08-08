@@ -11,7 +11,7 @@ export function SectionServices() {
                 description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
                 paragraphSize="lg"
             />
-            <div className="w-full h-full grid grid-cols-1 grid-rows-6 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+            <div className="w-full h-full grid grid-cols-1 grid-rows-6 lg:grid-cols-2 lg:grid-rows-3 gap-8">
                 <Card.Service
                     title="Search engine optimization"
                     bgCard="primary"

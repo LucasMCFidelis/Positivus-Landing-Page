@@ -2,15 +2,47 @@ import { useState } from "react";
 import { Card } from "../cards";
 import { Button } from "../button";
 import { Minus, Plus } from "lucide-react";
+import { paragraph } from "../../app";
+
+interface CardWorkingProcessProps {
+    indexCard: number
+
+}
+
 
 export function SectionWorkingProcess() {
-    const [isOpenCard, setIsOpenCard] = useState(false)
-    let bgCard: "primary" | "secondary" = (isOpenCard ? "secondary" : "primary")
-    function openCard() {
-        setIsOpenCard(true)
-    }
-    function closeCard() {
-        setIsOpenCard(false)
+    const CardWorkingProcess = (({ indexCard }: CardWorkingProcessProps) => (
+        <Card.Wrapper bgColor={openCardIndex === indexCard ? "secondary" : "primary"} className="space-y-4">
+            <div className="flex justify-between items-center gap-6">
+                <h2 className="text-title-2-mobile lg:text-title-2-desktop">
+                    {indexCard+1}
+                </h2>
+                <h3 className="text-title-3-mobile lg:text-title-3-desktop flex-indexCard">
+                    Consultation
+                </h3>
+                <Button
+                    colorBG={"white"}
+                    rounded="full"
+                    onClick={() => toggleCard(indexCard)}
+                >
+                    {openCardIndex === indexCard ? <Minus /> : <Plus />}
+                </Button>
+            </div>
+            {openCardIndex === indexCard && (
+                <>
+                    <div className="h-0.5 w-full bg-zinc-900"></div>
+                    <p className={paragraph({ size: "full" })}>
+                        During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.
+                    </p>
+                </>
+            )}
+        </Card.Wrapper>
+    ))
+    
+    const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
+
+    function toggleCard(index: number) {
+        setOpenCardIndex(openCardIndex === index ? null : index);
     }
 
     return (
@@ -21,44 +53,8 @@ export function SectionWorkingProcess() {
                 paragraphSize="sm"
             />
             <div className="space-y-8">
-                <Card.Wrapper bgColor={bgCard}>
-                    <div className="flex justify-between items-center gap-6">
-                        <h2 className="text-title-2-mobile lg:text-title-2-desktop">
-                            01
-                        </h2>
-                        <h3 className="text-title-3-mobile lg:text-title-3-desktop flex-1">
-                            Consultation
-                        </h3>
-                        {isOpenCard ? (
-                            <Button colorBG={"white"} rounded="full" onClick={closeCard}>
-                                <Minus/>
-                            </Button>
-                        ) : (
-                            <Button colorBG={"white"} rounded="full" onClick={openCard}>
-                                <Plus/>
-                            </Button>
-                        )}
-                    </div>
-                </Card.Wrapper>
-                <Card.Wrapper bgColor={bgCard}>
-                    <div className="flex justify-between items-center gap-6">
-                        <h2 className="text-title-2-mobile lg:text-title-2-desktop">
-                            02
-                        </h2>
-                        <h3 className="text-title-3-mobile lg:text-title-3-desktop flex-1">
-                            Research and Strategy Development
-                        </h3>
-                        {isOpenCard ? (
-                            <Button colorBG={"white"} rounded="full" onClick={closeCard}>
-                                <Minus/>
-                            </Button>
-                        ) : (
-                            <Button colorBG={"white"} rounded="full" onClick={openCard}>
-                                <Plus/>
-                            </Button>
-                        )}
-                    </div>
-                </Card.Wrapper>
+                <CardWorkingProcess indexCard={0}/>
+                <CardWorkingProcess indexCard={1}/>
             </div>
         </>
     )
