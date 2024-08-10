@@ -13,7 +13,7 @@ interface CardWrapperProps {
 
 export function CardWrapper({ bgColor, size, rounded, border, children, className}: CardWrapperProps) {
     const item = tv({
-        base: 'p-6 lg:px-10',
+        base: 'p-6',
 
         variants: {
             bgCard: {

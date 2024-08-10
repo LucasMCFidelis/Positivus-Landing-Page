@@ -13,8 +13,8 @@ interface TeamCardProps {
 
 const TeamCard = ({ name, position, pathImage, altImage, resumePerson }: TeamCardProps) => (
     <Card.Wrapper bgColor="primary" size="full" rounded="lg" className="flex flex-col gap-y-6 relative">
-        <div className="flex items-end gap-5">
-            <img src={pathImage} alt={altImage} className="self-start" />
+        <div className="flex items-end gap-3 space-y-8">
+            <img src={pathImage} alt={altImage} className="min-w-24 w-[10vw]" />
             <div className="w-full h-full flex flex-col justify-between relative">
                 <Button colorBG={"dark"} rounded="full" className="absolute top-0 right-0" >
                     <Linkedin color="#B9FF66" size={18}/>
@@ -39,7 +39,7 @@ export function SectionTeam() {
                 description="Meet the skilled and experienced team behind our successful digital marketing strategies"
                 paragraphSize="md"
             />
-            <div className="grid grid-cols-1 gap-7 lg:grid-cols-2 xl:grid-cols-3 lg:gap-10">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
                 {[
                     {
                         name: "John Smith",
