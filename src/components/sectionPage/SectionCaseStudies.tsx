@@ -2,8 +2,8 @@ import { paragraph } from "../../app";
 import { Card } from "../cards";
 
 const CaseStudyCard = ({ description }: { description: string }) => (
-    <div className="px-4 space-y-4 w-72 lg:w-1/3 flex-shrink-0">
-        <p className={paragraph({ size: "sm", alignTextMobile: "left" })}>
+    <div className="px-4 space-y-4 min-w-72 max-w-xs lg:w-1/3 flex-shrink-0">
+        <p className={paragraph({ size: "full", alignTextMobile: "left" })}>
             {description}
         </p>
         <a href="#" className="text-[#B9FF66] flex gap-5 items-center">
@@ -23,13 +23,28 @@ export function SectionCaseStudies() {
                 description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
                 paragraphSize="lg"
             />
-            <div className="overflow-x-auto lg:overflow-x-hidden">
-                <Card.Wrapper bgColor="tertiary" border="none" size="full" rounded="lg" className="w-max flex items-center justify-center text-zinc-200 lg:py-16">
+
+            {innerWidth < 1024 ? (
+                <div className="overflow-x-auto w-auto">
+                    <div className="w-max flex gap-x-[2%]">
+                        <Card.Wrapper bgColor="tertiary" border="none" size="full" rounded="lg" className="w-[90%] flex items-center justify-center text-zinc-200 px-[18%] md:px-[30%]">
+                            <CaseStudyCard description={"For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales."} />
+                        </Card.Wrapper>
+                        <Card.Wrapper bgColor="tertiary" border="none" size="full" rounded="lg" className="w-[90%] flex items-center justify-center text-zinc-200 px-[18%] md:px-[30%]">
+                            <CaseStudyCard description={"For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales."} />
+                        </Card.Wrapper>
+                        <Card.Wrapper bgColor="tertiary" border="none" size="full" rounded="lg" className="w-[90%] flex items-center justify-center text-zinc-200 px-[18%] md:px-[30%]">
+                            <CaseStudyCard description={"For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales."} />
+                        </Card.Wrapper>
+                    </div>
+                </div>
+            ) : (
+                <Card.Wrapper bgColor="tertiary" border="none" size="full" rounded="lg" className="w-full flex items-center justify-between text-zinc-200 py-16">
                     <CaseStudyCard description={"For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales."} />
                     <CaseStudyCard description="For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic." />
                     <CaseStudyCard description="For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales." />
                 </Card.Wrapper>
-            </div>
+            )}
         </>
     )
 }
