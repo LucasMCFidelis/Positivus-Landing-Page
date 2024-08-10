@@ -83,7 +83,7 @@ export function CardService({ title, bgCard, bgTitle, styleLink, pathImage }: Ca
                 </svg>
                 <p className="text-paragraph-mobile lg:text-paragraph-desktop hidden sm:block">Learn more</p>
             </a>
-            <div className="[grid-area:image]"><img src={pathImage} alt="" /></div>
+            <div className="[grid-area:image]"><img src={pathImage} alt="" className="w-44 h-32 object-contain lg:w-full lg:h-full"/></div>
         </CardWrapper>
     )
 }
