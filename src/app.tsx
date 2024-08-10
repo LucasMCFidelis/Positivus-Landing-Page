@@ -46,7 +46,7 @@ export function App() {
                 key={idx}
                 src={`/public/assets/logos-marquee/${logo}.svg`}
                 alt={`${logo} Logo`}
-                className={`w-[25vw] lg:w-[15vw] h-auto lg:px-14 ${idx >= 3 ? "ml-16 lg:ml-0" : ""}`}
+                className={`w-[25vw] xl:w-[15vw] h-auto lg:px-14 ${idx >= 3 ? "ml-16 lg:ml-0" : ""}`}
               />
             ))
             }

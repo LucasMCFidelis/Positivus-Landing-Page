@@ -22,7 +22,7 @@ export function CardWrapper({ bgColor, size, rounded, border, children, classNam
                 tertiary: 'bg-[#191A23]'
             },
             heightCard: {
-                sm: '',
+                sm: 'h-fit',
                 md: 'h-2/3',
                 lg: 'h-min lg:h-80',
                 full: 'h-full'

@@ -39,7 +39,7 @@ export function SectionTeam() {
                 description="Meet the skilled and experienced team behind our successful digital marketing strategies"
                 paragraphSize="md"
             />
-            <div className="grid grid-cols-1 gap-7 lg:grid-cols-3 lg:grid-rows-2 lg:gap-10">
+            <div className="grid grid-cols-1 gap-7 lg:grid-cols-2 xl:grid-cols-3 lg:gap-10">
                 {[
                     {
                         name: "John Smith",
