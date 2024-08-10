@@ -10,9 +10,6 @@ export default {
         sans: "Space Grotesk"
       },
       fontSize: {
-        'responsive-paragraph': 'clamp(0.8rem, 1rem, 1.5rem)',
-        'responsive-subtitle': 'clamp(1rem, 1.2rem, 2rem)',
-        'responsive-title': 'clamp(2rem, 8vw, 3.5rem)',
         'title-1-desktop': '5vw',
         'title-1-mobile': '10vw',
         'title-2-desktop': '3vw',

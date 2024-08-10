@@ -17,7 +17,7 @@ const CaseStudyCard = ({ description }: { description: string }) => (
 
 export function SectionCaseStudies() {
     return (
-        <div className="w-full ">
+        <>
             <Card.Header
                 title="Case Studies"
                 description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
@@ -30,6 +30,6 @@ export function SectionCaseStudies() {
                     <CaseStudyCard description="For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales." />
                 </Card.Wrapper>
             </div>
-        </div>
+        </>
     )
 }
