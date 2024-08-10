@@ -14,11 +14,11 @@ export function SectionWorkingProcess() {
     const CardWorkingProcess = (({ indexCard, step, description }: CardWorkingProcessProps) => (
         <Card.Wrapper bgColor={openCardIndex === indexCard ? "secondary" : "primary"} className="space-y-4">
             <div className="flex justify-between items-center">
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-6 w-4/5">
                     <h2 className="text-title-2-mobile lg:text-title-2-desktop">
                         {(indexCard+1).toString().padStart(2, '0')}
                     </h2>
-                    <h3 className="text-title-3-mobile lg:text-title-3-desktop flex-indexCard">
+                    <h3 className="text-title-3-mobile lg:text-title-3-desktop flex-1">
                         {step}
                     </h3>
                 </div>

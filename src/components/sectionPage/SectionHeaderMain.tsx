@@ -11,7 +11,7 @@ export function SectionHeaderMain() {
                 />
                 <div className="flex items-center space-x-10">
                     <Card.Nav direction="row"/>
-                    <Button text={"Request a quotes"} colorBG={"transparent"}></Button>
+                    <Button text={"Request a quotes"} colorBG={"transparent"} className="hidden lg:block"></Button>
                 </div>
             </Header.Root>
     )
