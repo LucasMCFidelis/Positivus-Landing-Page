@@ -2,8 +2,13 @@ import { paragraph } from "../../app";
 import { Card } from "../cards";
 
 const CaseStudyCard = ({ description }: { description: string }) => (
-    <div className="px-[18%] lg:px-[8%] space-y-4 min-w-72 max-w-xs flex-shrink-0">
-        <p className={paragraph({ size: "full", alignTextMobile: "left" })}>
+    <div className="px-[18%] lg:px-[8%] space-y-4 min-w-72 max-w-xs lg:max-w-5xl flex-shrink-0">
+        <p className={
+            paragraph({
+                size: "full",
+                alignTextMobile: "left"
+            })
+        }>
             {description}
         </p>
         <a href="#" className="text-[#B9FF66] flex gap-5 items-center">
@@ -34,20 +39,37 @@ export function SectionCaseStudies() {
                 <div className="overflow-x-auto w-auto">
                     <div className={`w-max grid grid-cols-${CaseStudyList.length} gap-x-[2%] `}>
                         {CaseStudyList.map((item, idx) => (
-                            <Card.Wrapper key={idx} bgColor="tertiary" border="none" size="full" rounded="lg" className="w-[90%] flex items-center justify-center text-zinc-200">
-                                <CaseStudyCard description={item} />
+                            <Card.Wrapper
+                                key={idx}
+                                bgColor="tertiary"
+                                border="none"
+                                size="full"
+                                rounded="lg"
+                                className="w-[90%] flex items-center justify-center text-zinc-200"
+                            >
+                                <CaseStudyCard
+                                    description={item}
+                                />
                             </Card.Wrapper>
                         ))}
                     </div>
                 </div>
             ) : (
-                <Card.Wrapper bgColor="tertiary" border="none" size="full" rounded="lg" className={`w-full flex items-center justify-between text-zinc-200 py-16`}>
+                <Card.Wrapper
+                    bgColor="tertiary"
+                    border="none"
+                    size="full"
+                    rounded="lg"
+                    className={`w-full flex items-center justify-between text-zinc-200 py-16`}
+                >
                     {CaseStudyList.map((item, idx) => (
                         <div
                             key={idx}
                             className={`${idx !== 0 ? 'border-l border-gray-300' : ''}`}
                         >
-                            <CaseStudyCard description={item} />
+                            <CaseStudyCard
+                                description={item}
+                            />
                         </div>
                     ))}
                 </Card.Wrapper>
