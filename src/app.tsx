@@ -61,11 +61,7 @@ export function App() {
           description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
           paragraphSize="md"
         />
-        <Card.Header
-          title="Contact Us"
-          description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
-          paragraphSize="sm"
-        />
+        <Section.ContactUs/>
       </div>
       <Section.Footer />
     </main>

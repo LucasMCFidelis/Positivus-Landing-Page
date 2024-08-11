@@ -1,4 +1,5 @@
 import { SectionCaseStudies } from "./SectionCaseStudies";
+import { SectionContactUs } from "./SectionContactUs";
 import { SectionFooter } from "./SectionFooter";
 import { SectionHeaderMain } from "./SectionHeaderMain";
 import { SectionServices } from "./SectionServices";
@@ -12,4 +13,5 @@ export const Section = {
     HeaderMain: SectionHeaderMain,
     Footer: SectionFooter,
     WorkingProcess: SectionWorkingProcess,
+    ContactUs: SectionContactUs,
 }
