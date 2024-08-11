@@ -11,7 +11,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ text, colorBG, rounded, children, className, ...rest }: ButtonProps) {
   const button = tv({
-    base:`text-xl text-paragraph-mobile lg:text-paragraph-desktop`,
+    base:`text-paragraph-mobile lg:text-paragraph-desktop`,
     variants: {
       color: {
         dark: 'bg-[#191A23] text-gray-200',
