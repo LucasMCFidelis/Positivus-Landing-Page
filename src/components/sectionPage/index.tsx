@@ -4,6 +4,7 @@ import { SectionFooter } from "./SectionFooter";
 import { SectionHeaderMain } from "./SectionHeaderMain";
 import { SectionServices } from "./SectionServices";
 import { SectionTeam } from "./SectionTeam";
+import { SectionTestimonials } from "./SectionTestimonials";
 import { SectionWorkingProcess } from "./SectionWorkingProcess";
 
 export const Section = {
@@ -14,4 +15,5 @@ export const Section = {
     Footer: SectionFooter,
     WorkingProcess: SectionWorkingProcess,
     ContactUs: SectionContactUs,
+    Testimonials: SectionTestimonials,
 }

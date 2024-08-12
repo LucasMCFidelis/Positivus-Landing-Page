@@ -56,12 +56,8 @@ export function App() {
         <Section.CaseStudies />
         <Section.WorkingProcess />
         <Section.Team />
-        <Card.Header
-          title="Testimonials"
-          description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
-          paragraphSize="md"
-        />
-        <Section.ContactUs/>
+        <Section.Testimonials />
+        <Section.ContactUs />
       </div>
       <Section.Footer />
     </main>
