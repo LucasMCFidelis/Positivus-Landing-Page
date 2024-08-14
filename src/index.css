@@ -43,4 +43,13 @@
     grid-template-columns: 40% 1fr; /* Adicionado para definir as colunas */
     grid-template-rows: 20% 1fr; /* Adicionado para definir as linhas */
   }
+  .grid-areas-desktop-footer {
+    display: grid;
+    grid-template-areas:
+      "logo navBar navBar socialMedias"
+      "contact contact subscribe subscribe"
+      "rightsReserved rightsReserved rightsReserved rightsReserved " ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 20% 1fr 20%;
+  }
 }

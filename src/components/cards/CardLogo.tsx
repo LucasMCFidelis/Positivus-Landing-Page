@@ -3,9 +3,10 @@ import { tv } from "tailwind-variants";
 interface CardLogoProps {
     styleLogo?: 'black' | 'white'
     size?: 'md' | 'lg'
+    areaGrid?: string
 }
 
-export function CardLogo({ styleLogo, size }: CardLogoProps) {
+export function CardLogo({ styleLogo, size, areaGrid }: CardLogoProps) {
     const logo = tv({
         base: '',
         variants: {
@@ -24,7 +25,7 @@ export function CardLogo({ styleLogo, size }: CardLogoProps) {
     })
     const colorStyle = logo({color: styleLogo})
     return (
-        <svg className={logo({size: size})} viewBox="0 0 220 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={`${logo({size: size})} [grid-area:${areaGrid}]`} viewBox="0 0 220 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_330_1194)">
                 <path d="M17.9986 5.53472L35.5997 0.349121L30.464 18.0001L35.5997 35.6012L17.9986 30.4655L0.347656 35.6012L5.53325 18.0001L0.347656 0.349121L17.9986 5.53472Z" fill={colorStyle} />
             </g>

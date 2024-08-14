@@ -1,7 +1,12 @@
 import { tv } from "tailwind-variants"
 import { paragraph } from "../../app"
 
-export function CardNav({direction}: {direction: 'dynamic' | 'row'}) {
+interface CardNavProps {
+    direction: 'dynamic' | 'row',
+    areaGrid?: string
+}
+
+export function CardNav({direction, areaGrid}: CardNavProps) {
     const nav = tv({
         base: 'space-y-4',
         variants: {
@@ -13,7 +18,7 @@ export function CardNav({direction}: {direction: 'dynamic' | 'row'}) {
     })
 
     return (
-        <nav className={`${nav({direction: direction})} ${paragraph({size: "lg", alignTextDesktop: "center"})}`}>
+        <nav className={`${nav({direction: direction})} ${paragraph({size: "lg", alignTextDesktop: "center"})} [grid-area:${areaGrid}]`}>
             <a>About Us</a>
             <a>Services</a>
             <a>Use Cases</a>
