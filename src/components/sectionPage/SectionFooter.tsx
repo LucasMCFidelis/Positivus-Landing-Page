@@ -13,7 +13,7 @@ export function SectionFooter() {
             bgColor="tertiary"
             size="full"
             rounded={innerWidth < 1024 ? "none" : "lgTop"}
-            className="flex flex-col items-center gap-5"
+            className="flex flex-col items-center gap-9"
         >
             <Card.Logo styleLogo="white" size="md" />
             <Card.Nav direction="dynamic" ></Card.Nav>
@@ -22,6 +22,13 @@ export function SectionFooter() {
                 {contactUs.map((item) => (
                     <p className="text-paragraph-mobile md:text-paragraph-desktop text-center text-[#f3f3f3]">{item[0]}: {item[1]}</p>
                 ))}
+            </div>
+            <div className="w-full flex flex-col lg:flex-row gap-4 justify-center items-center p-7 bg-[#292A32] rounded-2xl">
+                <input
+                    placeholder="Email"
+                    className={"rounded-xl px-8 py-4 border border-zinc-200 bg-transparent w-full h-[8vh]"}
+                />
+                <Button colorBG={"green"} text="Subscribe to news" className="lg:w-2/5" />
             </div>
             <div className="flex gap-3 justify-center items-center">
                 <Button colorBG={"white"} rounded="full" className="" >

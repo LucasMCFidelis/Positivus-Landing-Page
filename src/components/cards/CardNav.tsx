@@ -3,10 +3,10 @@ import { paragraph } from "../../app"
 
 export function CardNav({direction}: {direction: 'dynamic' | 'row'}) {
     const nav = tv({
-        base: '',
+        base: 'space-y-4',
         variants: {
             direction: {
-                dynamic: 'text-zinc-200 text-base flex flex-col items-center lg:flex-row lg:space-x-10 lg:text-xl',
+                dynamic: 'text-zinc-200 text-base flex flex-col lg:items-baseline justify-center lg:flex-row lg:space-x-10 lg:text-xl',
                 row: 'space-x-10 hidden text-xl xl:block' 
             }
         }
