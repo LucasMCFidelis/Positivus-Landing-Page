@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge"
 interface CardWrapperProps {
     bgColor?: "primary" | "secondary" | "tertiary" | undefined
     size?: "sm" | "md" | "lg" | "full" 
-    rounded?: "sm" | "lg"
+    rounded?: "none" | "sm" | "lg" | "lgTop"
     border?: "none" | "basic"
     className?: string
     children: ReactNode
@@ -28,8 +28,10 @@ export function CardWrapper({ bgColor, size, rounded, border, children, classNam
                 full: 'h-full'
             },
             roundedCard: {
+                none: 'rounded-none',
                 sm: 'rounded-xl',
-                lg: 'rounded-[45px]'
+                lg: 'rounded-[45px]',
+                lgTop: 'rounded-t-[45px]'
             },
             borderCard: {
                 none: 'border-none',
