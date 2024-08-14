@@ -15,8 +15,8 @@ export function CardLogo({ styleLogo, size, areaGrid }: CardLogoProps) {
                 black: 'black'
             }, 
             size: {
-                md: 'w-32 lg:w-1/6',
-                lg: 'w-40 lg:w-1/5',
+                md: 'w-32 lg:w-[10vw]',
+                lg: 'w-40 lg:w-[15vw]',
             }
         },
         defaultVariants: {
