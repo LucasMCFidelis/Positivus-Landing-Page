@@ -12,27 +12,31 @@ interface TestimonialsCardProps {
 
 export function SectionTestimonials() {
   const [cardFocus, setCardFocus] = useState<number>(1)
-  
-  const TestimonialsCard = ({ testimonial, person, position, id }: TestimonialsCardProps) => (
-    <div className={`max-w-lg lg:max-w-2xl p-8 bg-[#191A23] text-white relative ${cardFocus === id ? "block" : "hidden"} `}>
-      <div className={`border-2 ${cardFocus === id ? "border-[#B9FF66]" : "border-[#f3f3f3]"} rounded-2xl p-6 h-[40vh]`}>
-        <p className="text-paragraph-mobile md:text-paragraph-desktop h-[98%] overflow-y-scroll">
-          "{testimonial}"
-        </p>
+
+  const TestimonialsCard = ({ testimonial, person, position, id }: TestimonialsCardProps) => {
+    return (
+      <div
+        className={`w-[80vw] lg:w-[60vw] p-8 bg-[#191A23] text-white relative ${cardFocus === id ? "block" : "hidden lg:block"} `}
+      >
+        <div className={`border-2 ${cardFocus === id ? "border-[#B9FF66]" : "border-[#f3f3f3]"} rounded-2xl p-6 h-[40vh] lg:h-[30vh]`}>
+          <p className="text-paragraph-mobile md:text-paragraph-desktop h-[98%] overflow-y-auto">
+            "{testimonial}"
+          </p>
+        </div>
+        <div className={`bg-[#191A23] absolute w-10 h-10 border-2 ${cardFocus === id ? "border-[#B9FF66]" : "border-[#f3f3f3]"} border-t-transparent border-l-transparent rotate-45 left-20 bottom-24 rounded-md`}></div>
+        <div className="mt-8">
+          <p className="text-lg text-[#B9FF66]">{person}</p>
+          <p className="text-sm text-gray-400">{position}</p>
+        </div>
       </div>
-      <div className={`bg-[#191A23] absolute w-10 h-10 border-2 ${cardFocus === id ? "border-[#B9FF66]" : "border-[#f3f3f3]"} border-t-transparent border-l-transparent rotate-45 left-20 bottom-24 rounded-md`}></div>
-      <div className="mt-8">
-        <p className="text-lg text-[#B9FF66]">{person}</p>
-        <p className="text-sm text-gray-400">{position}</p>
-      </div>
-    </div>
-  )
-  
+    )
+  }
+
   function toggleTestimonial(id: number) {
-    if (id < 0){
-      setCardFocus(testimonials.length-1)
+    if (id < 0) {
+      setCardFocus(testimonials.length - 1)
       return
-    } else if (id > testimonials.length-1) {
+    } else if (id > testimonials.length - 1) {
       setCardFocus(0)
       return
     }
@@ -66,10 +70,26 @@ export function SectionTestimonials() {
       />
 
       <Card.Wrapper bgColor="tertiary" className="p-3">
-        <div className="flex">
-          {testimonials.map((item, idx) => (
-            <TestimonialsCard key={idx} id={idx} testimonial={item.testimonial} person={item.person} position={item.position} />
-          ))}
+        <div className="overflow-x-hidden w-auto">
+          <div className={`w-max grid grid-cols-${testimonials.length} gap-x-[2%] `}
+            style={{
+              transform:
+                window.innerWidth >= 1024
+                  ? `translateX(-${cardFocus * 28}%)`
+                  : "none",
+              transition: "transform 0.5s",
+            }}
+          >
+            {testimonials.map((item, idx) => (
+              <TestimonialsCard
+                key={idx}
+                id={idx}
+                testimonial={item.testimonial}
+                person={item.person}
+                position={item.position}
+              />
+            ))}
+          </div>
         </div>
         <div className="w-full flex justify-center">
           <Button
@@ -82,14 +102,14 @@ export function SectionTestimonials() {
           <div className="flex w-full lg:w-fit gap-2 items-center justify-center text-zinc-200">
             {testimonials.map((_, idx) => (
               <Button
+                key={idx}
                 colorBG={"dark"}
                 rounded="full"
                 onClick={() => toggleTestimonial(idx)}
               >
                 <Sparkle
-                  key={idx}
                   size={window.innerWidth < 1024 ? "6vw" : "2vw"}
-                  strokeWidth={3}
+                  strokeWidth={7}
                   className={`${cardFocus === idx ? "text-[#B9FF66]" : ""} rotate-45`}
                 />
               </Button>
