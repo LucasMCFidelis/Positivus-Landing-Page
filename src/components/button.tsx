@@ -32,7 +32,7 @@ export function Button({ text, colorBG, rounded, children, className, ...rest }:
   return (
     <button
       {...rest}
-      className={twMerge(button({ color: colorBG, rounded: rounded }), className)}
+      className={twMerge(button({ color: colorBG, rounded: rounded }), className, rest.disabled === true ? "opacity-50" : "")}
     >
       {text} 
       {children}

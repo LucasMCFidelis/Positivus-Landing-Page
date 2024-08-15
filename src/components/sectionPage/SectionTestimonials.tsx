@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight, Sparkle } from "lucide-react";
 import { Button } from "../button";
 import { Card } from "../cards";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 interface TestimonialsCardProps {
   id: number
@@ -16,7 +16,7 @@ export function SectionTestimonials() {
   const TestimonialsCard = ({ testimonial, person, position, id }: TestimonialsCardProps) => {
     return (
       <div
-        className={`w-[80vw] lg:w-[60vw] p-8 bg-[#191A23] text-white relative ${cardFocus === id ? "block" : "hidden lg:block"} `}
+        className={`w-[80vw] lg:w-[60vw] p-8 bg-[#191A23] text-white relative ${cardFocus === id ? "block" : "hidden lg:block"}`}
       >
         <div className={`border-2 ${cardFocus === id ? "border-[#B9FF66]" : "border-[#f3f3f3]"} rounded-2xl p-6 h-[40vh] lg:h-[30vh]`}>
           <p className="text-paragraph-mobile md:text-paragraph-desktop h-[98%] overflow-y-auto">
@@ -33,19 +33,22 @@ export function SectionTestimonials() {
   }
 
   function toggleTestimonial(id: number) {
-    if (id < 0) {
-      setCardFocus(testimonials.length - 1)
-      return
-    } else if (id > testimonials.length - 1) {
-      setCardFocus(0)
-      return
-    }
     setCardFocus(id)
   }
 
   const testimonials = [
     {
       testimonial: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+      person: "John Smith",
+      position: "Marketing Director at XYZ Corp"
+    },
+    {
+      testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum, temporibus optio error repellendus eius ipsam vero minus et illo magni alias fuga modi quibusdam recusandae maiores nemo quia adipisci!",
+      person: "John Smith",
+      position: "Marketing Director at XYZ Corp"
+    },
+    {
+      testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum, temporibus optio error repellendus eius ipsam vero minus et illo magni alias fuga modi quibusdam recusandae maiores nemo quia adipisci!",
       person: "John Smith",
       position: "Marketing Director at XYZ Corp"
     },
@@ -71,11 +74,13 @@ export function SectionTestimonials() {
 
       <Card.Wrapper bgColor="tertiary" className="p-3">
         <div className="overflow-x-hidden w-auto">
-          <div className={`w-max grid grid-cols-${testimonials.length} gap-x-[2%] `}
+          <div className="w-max lg:ml-[10%]"
             style={{
+              display: 'grid',
+              gridTemplateColumns: `repeat(${testimonials.length}, 1fr)`,
               transform:
                 window.innerWidth >= 1024
-                  ? `translateX(-${cardFocus * 28}%)`
+                  ? `translateX(-${cardFocus * (100 / testimonials.length)}%)`
                   : "none",
               transition: "transform 0.5s",
             }}
@@ -94,12 +99,13 @@ export function SectionTestimonials() {
         <div className="w-full flex justify-center">
           <Button
             colorBG={"dark"}
-            className="flex items-center justify-center"
+            className="flex items-center justify-center w-1/4"
             onClick={() => toggleTestimonial(cardFocus - 1)}
+            disabled={cardFocus === 0 ? true : false}
           >
-            <ArrowLeft />
+            <ArrowLeft size={window.innerWidth < 1024 ? "6vw" : "2vw"} />
           </Button>
-          <div className="flex w-full lg:w-fit gap-2 items-center justify-center text-zinc-200">
+          <div className="flex w-fit gap-2 items-center justify-center text-zinc-200">
             {testimonials.map((_, idx) => (
               <Button
                 key={idx}
@@ -117,10 +123,11 @@ export function SectionTestimonials() {
           </div>
           <Button
             colorBG={"dark"}
-            className="flex items-center justify-center"
+            className={`flex items-center justify-center w-1/4`}
             onClick={() => toggleTestimonial(cardFocus + 1)}
+            disabled={(cardFocus === testimonials.length - 1) ? true : false}
           >
-            <ArrowRight />
+            <ArrowRight size={window.innerWidth < 1024 ? "6vw" : "2vw"}/>
           </Button>
         </div>
       </Card.Wrapper>
