@@ -14,9 +14,9 @@ export function SectionTestimonials() {
   const [cardFocus, setCardFocus] = useState<number>(1)
   
   const TestimonialsCard = ({ testimonial, person, position, id }: TestimonialsCardProps) => (
-    <div className="max-w-lg lg:max-w-2xl p-8 bg-[#191A23] text-white relative">
-      <div className={`border-2 ${cardFocus === id ? "border-[#B9FF66]" : "border-[#f3f3f3]"} rounded-2xl p-6`}>
-        <p className="text-paragraph-mobile md:text-paragraph-desktop md:text">
+    <div className={`max-w-lg lg:max-w-2xl p-8 bg-[#191A23] text-white relative ${cardFocus === id ? "block" : "hidden"} `}>
+      <div className={`border-2 ${cardFocus === id ? "border-[#B9FF66]" : "border-[#f3f3f3]"} rounded-2xl p-6 h-[40vh]`}>
+        <p className="text-paragraph-mobile md:text-paragraph-desktop h-[98%] overflow-y-scroll">
           "{testimonial}"
         </p>
       </div>
@@ -46,12 +46,12 @@ export function SectionTestimonials() {
       position: "Marketing Director at XYZ Corp"
     },
     {
-      testimonial: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+      testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum, temporibus optio error repellendus eius ipsam vero minus et illo magni alias fuga modi quibusdam recusandae maiores nemo quia adipisci!",
       person: "John Smith",
       position: "Marketing Director at XYZ Corp"
     },
     {
-      testimonial: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+      testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum, temporibus optio error repellendus eius ipsam vero minus et illo magni alias fuga modi quibusdam recusandae maiores nemo quia adipisci repellendus eius ipsam vero minus et illo magni alias fuga modi quibusdam recusandae maiores nemo quia adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum, temporibus optio error repellendus eius ipsam vero minus et illo magni alias fuga modi quibusdam recusandae maiores nemo quia adipisci!",
       person: "John Smith",
       position: "Marketing Director at XYZ Corp"
     },
@@ -79,7 +79,7 @@ export function SectionTestimonials() {
           >
             <ArrowLeft />
           </Button>
-          <div className="flex gap-2 items-center justify-between text-zinc-200">
+          <div className="flex w-full lg:w-fit gap-2 items-center justify-center text-zinc-200">
             {testimonials.map((_, idx) => (
               <Button
                 colorBG={"dark"}
