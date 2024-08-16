@@ -1,12 +1,12 @@
 import { tv } from "tailwind-variants"
 import { paragraph } from "../../app"
 
-interface CardNavProps {
+interface HeaderNavProps {
     direction: 'dynamic' | 'row',
     areaGrid?: string
 }
 
-export function CardNav({direction, areaGrid}: CardNavProps) {
+export function HeaderNav({direction, areaGrid}: HeaderNavProps) {
     const nav = tv({
         base: 'space-y-4',
         variants: {

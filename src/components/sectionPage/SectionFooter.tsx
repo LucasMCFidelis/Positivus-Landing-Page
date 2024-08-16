@@ -1,6 +1,7 @@
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 import { Button } from "../button";
 import { Card } from "../cards";
+import { Header } from "../header";
 
 export function SectionFooter() {
     const contactUs = [
@@ -15,8 +16,8 @@ export function SectionFooter() {
             rounded={innerWidth < 1024 ? "none" : "lgTop"}
             className="flex flex-col items-center gap-9 lg:grid-areas-desktop-footer text-paragraph-mobile lg:text-paragraph-desktop"
         >
-            <Card.Logo styleLogo="white" size="md" areaGrid="logo" />
-            <Card.Nav direction="dynamic" areaGrid="navBar"></Card.Nav>
+            <Header.Logo styleLogo="white" size="md" areaGrid="logo" />
+            <Header.Nav direction="dynamic" areaGrid="navBar"></Header.Nav>
             <div className="[grid-area:information] flex flex-col lg:flex-row gap-y-9 lg:justify-between">
                 <div className="flex flex-col gap-3 justify-center items-center lg:items-start lg:w-1/3 text-center lg:text-left">
                     <h3 className="text-title-3-mobile lg:text-title-3-desktop bg-[#B9FF66] px-3 rounded-xl font-semibold mb-7">Contact us:</h3>

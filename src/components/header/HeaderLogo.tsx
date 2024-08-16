@@ -1,12 +1,12 @@
 import { tv } from "tailwind-variants";
 
-interface CardLogoProps {
+interface HeaderLogoProps {
     styleLogo?: 'black' | 'white'
     size?: 'md' | 'lg'
     areaGrid?: string
 }
 
-export function CardLogo({ styleLogo, size, areaGrid }: CardLogoProps) {
+export function HeaderLogo({ styleLogo, size, areaGrid }: HeaderLogoProps) {
     const logo = tv({
         base: '',
         variants: {
