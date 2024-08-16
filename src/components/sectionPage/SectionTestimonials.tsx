@@ -11,7 +11,7 @@ interface TestimonialsCardProps {
 }
 
 export function SectionTestimonials() {
-  const [cardFocus, setCardFocus] = useState<number>(1)
+  const [cardFocus, setCardFocus] = useState<number>(0)
   
   const TestimonialsCard = ({ testimonial, person, position, id }: TestimonialsCardProps) => {
     const cardBaseStyle = "w-[80vw] lg:w-[60vw] p-8 bg-[#191A23] text-white relative"
@@ -26,7 +26,7 @@ export function SectionTestimonials() {
             "{testimonial}"
           </p>
         </div>
-        <div className={`bg-[#191A23] absolute w-10 h-10 border-2 ${cardBorderStyles} border-t-transparent border-l-transparent rotate-45 left-20 bottom-24 rounded-md`}></div>
+        <div className={`bg-[#191A23] absolute w-10 h-10 border-2 ${cardBorderStyles} border-t-transparent border-l-transparent rotate-45 left-20 bottom-24 rounded-md`}/>
         <div className="mt-8">
           <p className="text-lg text-[#B9FF66]">{person}</p>
           <p className="text-sm text-gray-400">{position}</p>
@@ -69,6 +69,7 @@ export function SectionTestimonials() {
 
   const isPrevDisabled = (cardFocus === 0)
   const isNextDisabled = (cardFocus === testimonials.length - 1)
+  const sizeButtons = window.innerWidth < 1024 ? '6vw' : '2vw'
 
   return (
     <>
@@ -80,7 +81,7 @@ export function SectionTestimonials() {
 
       <Card.Wrapper bgColor="tertiary" className="p-3">
         <div className="overflow-x-hidden w-auto">
-          <div className="w-max lg:ml-[10%]"
+          <div className="w-max lg:ml-[15%]"
             style={{
               display: 'grid',
               gridTemplateColumns: `repeat(${testimonials.length}, 1fr)`,
@@ -105,13 +106,13 @@ export function SectionTestimonials() {
         <div className="w-full flex justify-center">
           <Button
             colorBG={"dark"}
-            className="flex items-center justify-center w-1/4"
+            className={"w-1/4"}
             onClick={() => toggleTestimonial(cardFocus - 1)}
             disabled={isPrevDisabled}
           >
-            <ArrowLeft size={window.innerWidth < 1024 ? "6vw" : "2vw"} />
+            <ArrowLeft size={sizeButtons} />
           </Button>
-          <div className="flex w-fit gap-2 items-center justify-center text-zinc-200">
+          <div className="flex gap-2 items-center justify-center text-zinc-200">
             {testimonials.map((_, idx) => (
               <Button
                 key={idx}
@@ -120,7 +121,7 @@ export function SectionTestimonials() {
                 onClick={() => toggleTestimonial(idx)}
               >
                 <Sparkle
-                  size={window.innerWidth < 1024 ? "6vw" : "2vw"}
+                  size={sizeButtons}
                   strokeWidth={7}
                   className={`${cardFocus === idx ? "text-[#B9FF66]" : ""} rotate-45`}
                 />
@@ -129,11 +130,11 @@ export function SectionTestimonials() {
           </div>
           <Button
             colorBG={"dark"}
-            className={`flex items-center justify-center w-1/4`}
+            className={"w-1/4"}
             onClick={() => toggleTestimonial(cardFocus + 1)}
             disabled={isNextDisabled}
           >
-            <ArrowRight size={window.innerWidth < 1024 ? "6vw" : "2vw"}/>
+            <ArrowRight size={sizeButtons}/>
           </Button>
         </div>
       </Card.Wrapper>
