@@ -1,6 +1,7 @@
-import { paragraph } from "../../app";
-import { Button } from "../button";
-import { Card } from "../cards";
+import { paragraph } from "../../../app";
+import { Button } from "../../button";
+import { Card } from "../../cards";
+import { ServiceCard } from "./ServiceCard";
 
 
 export function SectionServices() {
@@ -12,42 +13,42 @@ export function SectionServices() {
                 paragraphSize="lg"
             />
             <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card.Service
+                <ServiceCard
                     title="Search engine optimization"
                     bgCard="primary"
                     bgTitle="green"
                     styleLink="dark"
                     pathImage="/public/assets/icons-services/search.svg"
                 />
-                <Card.Service
+                <ServiceCard
                     title="Pay-per-click advertising"
                     bgCard="secondary"
                     bgTitle="white"
                     styleLink="dark"
                     pathImage="/public/assets/icons-services/advertising.svg"
                 />
-                <Card.Service
+                <ServiceCard
                     title="Social Media Marketing"
                     bgCard="tertiary"
                     bgTitle="white"
                     styleLink="white"
                     pathImage="/public/assets/icons-services/marketing.svg"
                 />
-                <Card.Service
+                <ServiceCard
                     title="Email Marketing"
                     bgCard="primary"
                     bgTitle="green"
                     styleLink="dark"
                     pathImage="/public/assets/icons-services/email.svg"
                 />
-                <Card.Service
+                <ServiceCard
                     title="Content Creation"
                     bgCard="secondary"
                     bgTitle="white"
                     styleLink="dark"
                     pathImage="/public/assets/icons-services/content-creation.svg"
                 />
-                <Card.Service
+                <ServiceCard
                     title="Analytics and Tracking"
                     bgCard="tertiary"
                     bgTitle="green"

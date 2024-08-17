@@ -1,12 +1,12 @@
-import { paragraph } from "../app";
-import { Button } from "./button";
+import { paragraph } from "../../app"
+import { Button } from "../button"
 
-interface MarketingCardProps {
+interface SectionMarketingProps {
     paragraphSize?: "full" | "sm" | "md" | "lg" | undefined
     alignTextMobile?: "center" | "left" | undefined
 }
 
-export function MarketingCard({ paragraphSize, alignTextMobile }: MarketingCardProps) {
+export function SectionMarketing({ paragraphSize, alignTextMobile }: SectionMarketingProps) {
     return (
         <div className="
         grid w-full gap-y-6 justify-items-start items-center

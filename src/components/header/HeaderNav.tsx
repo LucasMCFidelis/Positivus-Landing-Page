@@ -12,7 +12,7 @@ export function HeaderNav({direction, areaGrid}: HeaderNavProps) {
         variants: {
             direction: {
                 dynamic: 'text-zinc-200 flex flex-col lg:items-baseline justify-center lg:flex-row lg:space-x-10',
-                row: 'space-x-10 hidden text-xl xl:block' 
+                row: 'space-x-10' 
             }
         }
     })

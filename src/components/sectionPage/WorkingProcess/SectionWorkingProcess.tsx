@@ -1,46 +1,8 @@
 import { useState } from "react";
-import { Card } from "../cards";
-import { Button } from "../button";
-import { Minus, Plus } from "lucide-react";
-import { paragraph } from "../../app";
-
-interface CardWorkingProcessProps {
-    indexCard: number
-    step: string
-    description: string
-}
+import { Card } from "../../cards";
+import { WorkingProcessCard } from "./WorkingProcessCard";
 
 export function SectionWorkingProcess() {
-    const CardWorkingProcess = (({ indexCard, step, description }: CardWorkingProcessProps) => (
-        <Card.Wrapper bgColor={openCardIndex === indexCard ? "secondary" : "primary"} className="space-y-4">
-            <div className="flex justify-between items-center">
-                <div className="flex items-center gap-6 w-4/5">
-                    <h2 className="text-title-2-mobile lg:text-title-2-desktop">
-                        {(indexCard+1).toString().padStart(2, '0')}
-                    </h2>
-                    <h3 className="text-title-3-mobile lg:text-title-3-desktop flex-1">
-                        {step}
-                    </h3>
-                </div>
-                <Button
-                    colorBG={"white"}
-                    rounded="full"
-                    onClick={() => toggleCard(indexCard)}
-                >
-                    {openCardIndex === indexCard ? <Minus /> : <Plus />}
-                </Button>
-            </div>
-            {openCardIndex === indexCard && (
-                <>
-                    <div className="h-0.5 w-full bg-zinc-900"></div>
-                    <p className={paragraph({ size: "full" })}>
-                        {description}
-                    </p>
-                </>
-            )}
-        </Card.Wrapper>
-    ))
-    
     const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
 
     function toggleCard(index: number) {
@@ -81,7 +43,14 @@ export function SectionWorkingProcess() {
                         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati deserunt iure deleniti officia quasi quisquam harum, facilis eum! Maxime mollitia dolore temporibus facere ducimus ut consequatur iste in tempore facilis!'
                     },
                 ].map((item, idx) => (
-                    <CardWorkingProcess key={idx} indexCard={idx} step={item.step} description={item.description}/>
+                    <WorkingProcessCard
+                        key={idx}
+                        indexCard={idx}
+                        step={item.step}
+                        description={item.description}
+                        openCardIndex={openCardIndex}
+                        toggleCard={toggleCard}
+                    />
                 ))}
             </div>
         </>

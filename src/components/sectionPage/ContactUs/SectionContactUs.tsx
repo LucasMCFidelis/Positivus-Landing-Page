@@ -1,43 +1,7 @@
-import { InputHTMLAttributes, TextareaHTMLAttributes } from "react";
-import { Button } from "../button";
-import { Card } from "../cards";
-import { twMerge } from 'tailwind-merge'
-
-interface ContactUsInputProps extends InputHTMLAttributes<HTMLInputElement> {
-    title: string
-}
-
-const ContactUsInput = ({ title, ...rest }: ContactUsInputProps) => (
-    <div className="flex flex-col gap-2">
-        <label htmlFor={title.toLowerCase()}>
-            {title + (rest.required === true ? "*" : "")}
-        </label>
-        <input
-            {...rest}
-            id={title.toLowerCase()}
-            placeholder={title}
-            className={twMerge("rounded-xl px-8 py-4 border border-zinc-900 w-full h-[8vh] resize-none ", rest.className)}
-        />
-    </div>
-)
-
-interface ContactUsTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-    title: string
-}
-
-const ContactUsTextarea = ({ title, ...rest }: ContactUsTextareaProps) => (
-    <div className="flex flex-col gap-2">
-        <label htmlFor={title.toLowerCase()}>
-            {title + (rest.required === true ? "*" : "")}
-        </label>
-        <textarea
-            {...rest}
-            id={title.toLowerCase()}
-            placeholder={title}
-            className={twMerge("rounded-xl px-8 py-4 border border-zinc-900 w-full h-[20vh] resize-none ", rest.className)}
-        />
-    </div>
-)
+import { Button } from "../../button";
+import { Card } from "../../cards";
+import { ContactUsInput } from "./ContactUsInput";
+import { ContactUsTextarea } from "./ContactUsTextarea";
 
 export function SectionContactUs() {
     return (

@@ -1,6 +1,5 @@
 import { tv } from "tailwind-variants";
 import "./index.css";
-import { MarketingCard } from "./components/marketingCard";
 import Marquee from "react-fast-marquee";
 import { Section } from "./components/sectionPage";
 
@@ -34,7 +33,7 @@ export function App() {
     <main className="space-y-12">
       <div className="flex flex-col w-full px-5 space-y-12 md:px-12 lg:px-24">
         <Section.HeaderMain />
-        <MarketingCard
+        <Section.Marketing
           paragraphSize="md"
           alignTextMobile="left"
         />

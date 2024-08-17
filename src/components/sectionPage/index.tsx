@@ -1,11 +1,12 @@
-import { SectionCaseStudies } from "./SectionCaseStudies";
-import { SectionContactUs } from "./SectionContactUs";
+import { SectionCaseStudies } from "./CaseStudies/SectionCaseStudies";
+import { SectionContactUs } from "./ContactUs/SectionContactUs";
 import { SectionFooter } from "./SectionFooter";
 import { SectionHeaderMain } from "./SectionHeaderMain";
-import { SectionServices } from "./SectionServices";
-import { SectionTeam } from "./SectionTeam";
-import { SectionTestimonials } from "./SectionTestimonials";
-import { SectionWorkingProcess } from "./SectionWorkingProcess";
+import { SectionMarketing } from "./SectionMarketing";
+import { SectionServices } from "./Services/SectionServices";
+import { SectionTeam } from "./Team/SectionTeam";
+import { SectionTestimonials } from "./Testimonials/SectionTestimonials";
+import { SectionWorkingProcess } from "./WorkingProcess/SectionWorkingProcess";
 
 export const Section = {
     Services: SectionServices,
@@ -16,4 +17,5 @@ export const Section = {
     WorkingProcess: SectionWorkingProcess,
     ContactUs: SectionContactUs,
     Testimonials: SectionTestimonials,
+    Marketing: SectionMarketing
 }
