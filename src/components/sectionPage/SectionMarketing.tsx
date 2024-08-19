@@ -8,10 +8,25 @@ interface SectionMarketingProps {
 
 export function SectionMarketing({ paragraphSize, alignTextMobile }: SectionMarketingProps) {
     return (
-        <div className="
-        grid w-full gap-y-6 justify-items-start items-center
-        grid-areas-card-mobile
-        lg:grid-areas-card-desktop"
+        <div
+            className="w-full gap-y-6 justify-items-start items-center
+            grid-cols-1 grid-rows-[auto_auto_auto_auto]
+            lg:grid-cols-[52%_1fr] lg:grid-rows-[auto_auto_auto]"
+            style={{
+                display: 'grid',
+                gridTemplateAreas:
+                    window.innerWidth >= 1024 
+                        ? (
+                            `'title image'
+                            'subtitle image'
+                            'button image'`
+                        ) : (
+                            `'title'
+                            'image'
+                            'subtitle'
+                            'button'`
+                        )               
+            }}
         >
             <div className="
                 [grid-area:title]  
