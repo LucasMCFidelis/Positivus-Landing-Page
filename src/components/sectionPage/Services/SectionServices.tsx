@@ -61,7 +61,9 @@ export function SectionServices() {
                     <div className="h-full flex flex-col gap-6 justify-center items-center lg:items-start">
                         <h3 className="text-title-3-mobile md:text-title-3-desktop font-semibold">Let’s make things happen</h3>
                         <p className={paragraph({ size: 'md' })}>Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.</p>
-                        <Button text={"Get your free proposal"} colorBG={"dark"}></Button>
+                        <Button colorBG={"dark"}>
+                            Get your free proposal
+                        </Button>
                     </div>
                     <svg className="absolute hidden lg:block lg:right-10 lg:-top-10 xl:right-32" width="359" height="395" viewBox="0 0 359 395" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M337.5 198.5C337.5 200.778 336.403 203.052 334.208 205.306C332.012 207.561 328.746 209.76 324.497 211.87C316 216.09 303.672 219.904 288.398 223.113C257.858 229.528 215.644 233.5 169 233.5C122.356 233.5 80.1418 229.528 49.6017 223.113C34.3276 219.904 22.0001 216.09 13.5033 211.87C9.25393 209.76 5.98843 207.561 3.79163 205.306C1.5966 203.052 0.5 200.778 0.5 198.5C0.5 196.222 1.5966 193.948 3.79163 191.694C5.98843 189.439 9.25393 187.24 13.5033 185.13C22.0001 180.91 34.3276 177.096 49.6017 173.887C80.1418 167.472 122.356 163.5 169 163.5C215.644 163.5 257.858 167.472 288.398 173.887C303.672 177.096 316 180.91 324.497 185.13C328.746 187.24 332.012 189.439 334.208 191.694C336.403 193.948 337.5 196.222 337.5 198.5Z" stroke="black" />

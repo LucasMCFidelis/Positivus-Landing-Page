@@ -47,7 +47,9 @@ export function SectionTeam() {
                 ))}
             </div>
             <div className="flex justify-end">
-                <Button text={"See all team"} colorBG={"dark"} />
+                <Button colorBG={"dark"}>
+                    See all team
+                </Button>
             </div>
         </>
     );

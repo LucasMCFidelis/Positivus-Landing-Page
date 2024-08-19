@@ -23,7 +23,9 @@ export function SectionMarketing({ paragraphSize, alignTextMobile }: SectionMark
             <p className={`[grid-area:subtitle] ${paragraph({ size: paragraphSize, alignTextMobile: alignTextMobile })}`}>
                 Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
             </p>
-            <Button text={"Book a consultation"} colorBG={"dark"} />
+            <Button colorBG={"dark"}>
+                Book a consultation
+            </Button>
             <img src="/public/assets/megafone.svg" alt="" className="[grid-area:image] w-full h-full place-self-center"
             />
         </div>

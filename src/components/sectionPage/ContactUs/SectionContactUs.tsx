@@ -33,9 +33,10 @@ export function SectionContactUs() {
 
                     <Button
                         colorBG={"dark"}
-                        text="Send Message"
                         type="submit"
-                    />
+                    >
+                        Send Message
+                    </Button>
                 </form>
                 <img
                     src="/public/assets/contactUsImage.svg"

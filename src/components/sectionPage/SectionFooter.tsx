@@ -31,7 +31,9 @@ export function SectionFooter() {
                         placeholder="Email"
                         className={"rounded-xl px-8 py-4 border border-zinc-200 bg-transparent w-full lg:w-1/2 h-[8vh]"}
                     />
-                    <Button colorBG={"green"} text="Subscribe to news" className="lg:w-1/2" type="submit" />
+                    <Button colorBG={"green"} className="lg:w-1/2" type="submit">
+                        Subscribe to news
+                    </Button>
                 </form>
             </div>
             <div className="flex gap-3 justify-center items-center [grid-area:socialMedias]">

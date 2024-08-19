@@ -3,14 +3,13 @@ import { tv } from "tailwind-variants"
 import { twMerge } from "tailwind-merge"
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text?: string,
   colorBG: "dark" | "green" | "white" | "transparent"
   rounded?: "sm" | "full"
   border?: boolean
   children?: ReactNode
 }
 
-export function Button({ text, colorBG, rounded, border, children, className, ...rest }: ButtonProps) {
+export function Button({ colorBG, rounded, border, children, className, ...rest }: ButtonProps) {
   const button = tv({
     base: 'text-paragraph-mobile lg:text-paragraph-desktop',
     variants: {
@@ -40,7 +39,6 @@ export function Button({ text, colorBG, rounded, border, children, className, ..
       {...rest}
       className={twMerge(button({ color: colorBG, rounded: rounded, border: border }), className, rest.disabled === true ? "opacity-50" : "")}
     >
-      {text}
       {children}
     </button>
   )

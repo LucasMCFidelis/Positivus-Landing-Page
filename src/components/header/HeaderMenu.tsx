@@ -26,7 +26,9 @@ export function HeaderMenu() {
                                     <X size={sizeButtons} />
                                 </Button>
                                 <Header.Nav direction="dynamic" />
-                                <Button text={"Request a quotes"} colorBG={"white"} border={true}></Button>
+                                <Button colorBG={"white"} border={true}>
+                                    Request a quotes
+                                </Button>
                             </Card.Wrapper>
                         </div>
                     ) : (
@@ -44,7 +46,9 @@ export function HeaderMenu() {
             ) : (
                 <div className="flex items-center space-x-10">
                     <Header.Nav direction="row" />
-                    <Button text={"Request a quotes"} colorBG={"transparent"} border={true} className="hidden lg:block"></Button>
+                    <Button colorBG={"transparent"} border={true} className="hidden lg:block">
+                        Request a quotes
+                    </Button>
                 </div>
             )}
         </>
