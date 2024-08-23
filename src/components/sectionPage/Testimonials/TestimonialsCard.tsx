@@ -21,8 +21,12 @@ export function TestimonialsCard({ testimonial, person, position, id, cardFocus 
             </div>
             <div className={`bg-[#191A23] absolute w-10 h-10 border-2 ${cardBorderStyles} border-t-transparent border-l-transparent rotate-45 left-20 bottom-24 rounded-md`} />
             <div className="mt-8">
-                <p className="text-lg text-[#B9FF66]">{person}</p>
-                <p className="text-sm text-gray-400">{position}</p>
+                <p className="text-lg text-[#B9FF66]">
+                    {person}
+                </p>
+                <p className="text-sm text-gray-400">
+                    {position}
+                </p>
             </div>
         </div>
     )

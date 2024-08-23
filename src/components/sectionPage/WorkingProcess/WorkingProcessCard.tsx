@@ -11,11 +11,14 @@ interface WorkingProcessCardProps {
     toggleCard: (index: number) => void
 }
 
-export function WorkingProcessCard({ indexCard, step, description, openCardIndex, toggleCard }: WorkingProcessCardProps){
-    
+export function WorkingProcessCard({ indexCard, step, description, openCardIndex, toggleCard }: WorkingProcessCardProps) {
+
 
     return (
-        <Card.Wrapper bgColor={openCardIndex === indexCard ? "secondary" : "primary"} className="space-y-4">
+        <Card.Wrapper
+            bgColor={openCardIndex === indexCard ? "secondary" : "primary"}
+            className="space-y-4"
+        >
             <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6 w-4/5">
                     <h2 className="text-title-2-mobile lg:text-title-2-desktop">
@@ -37,7 +40,11 @@ export function WorkingProcessCard({ indexCard, step, description, openCardIndex
             {openCardIndex === indexCard && (
                 <>
                     <div className="h-0.5 w-full bg-zinc-900"></div>
-                    <p className={paragraph({ size: "full" })}>
+                    <p className={
+                        paragraph({
+                            size: "full"
+                        })
+                    }>
                         {description}
                     </p>
                 </>

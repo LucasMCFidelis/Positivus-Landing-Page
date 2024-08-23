@@ -15,7 +15,7 @@ export function SectionMarketing({ paragraphSize, alignTextMobile }: SectionMark
             style={{
                 display: 'grid',
                 gridTemplateAreas:
-                    window.innerWidth >= 1024 
+                    window.innerWidth >= 1024
                         ? (
                             `'title image'
                             'subtitle image'
@@ -25,7 +25,7 @@ export function SectionMarketing({ paragraphSize, alignTextMobile }: SectionMark
                             'image'
                             'subtitle'
                             'button'`
-                        )               
+                        )
             }}
         >
             <div className="
@@ -35,13 +35,24 @@ export function SectionMarketing({ paragraphSize, alignTextMobile }: SectionMark
             ">
                 Navigating the digital landscape for success
             </div>
-            <p className={`[grid-area:subtitle] ${paragraph({ size: paragraphSize, alignTextMobile: alignTextMobile })}`}>
+            <p className={`
+                [grid-area:subtitle] 
+                ${paragraph({
+                size: paragraphSize,
+                alignTextMobile: alignTextMobile
+            })}
+            `}>
                 Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
             </p>
-            <Button colorBG={"dark"}>
+            <Button
+                colorBG={"dark"}
+            >
                 Book a consultation
             </Button>
-            <img src="/public/assets/megafone.svg" alt="" className="[grid-area:image] w-full h-full place-self-center"
+            <img
+                src="/public/assets/megafone.svg"
+                alt=""
+                className="[grid-area:image] w-full h-full place-self-center"
             />
         </div>
     )
