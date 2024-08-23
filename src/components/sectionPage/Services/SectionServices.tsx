@@ -57,11 +57,25 @@ export function SectionServices() {
                 />
             </div>
             <div className="w-full">
-                <Card.Wrapper bgColor="primary" border="none" size="md" rounded="lg" className="relative lg:mt-24 lg:mb-24 flex justify-center items-center lg:justify-start">
+                <Card.Wrapper
+                    bgColor="primary"
+                    border="none"
+                    size="md"
+                    rounded="lg"
+                    className="relative lg:mt-24 lg:mb-24 flex justify-center items-center lg:justify-start"
+                >
                     <div className="h-full flex flex-col gap-6 justify-center items-center lg:items-start">
-                        <h3 className="text-title-3-mobile md:text-title-3-desktop font-semibold">Let’s make things happen</h3>
-                        <p className={paragraph({ size: 'md' })}>Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.</p>
-                        <Button colorBG={"dark"}>
+                        <h3 className="text-title-3-mobile md:text-title-3-desktop font-semibold">
+                            Let’s make things happen
+                        </h3>
+                        <p className={
+                            paragraph({ size: 'md' })
+                        }>
+                            Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.
+                        </p>
+                        <Button
+                            colorBG={"dark"}
+                        >
                             Get your free proposal
                         </Button>
                     </div>

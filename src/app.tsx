@@ -57,7 +57,9 @@ export function App() {
         <Section.Testimonials />
         <Section.ContactUs />
       </div>
-      <div className="space-y-12 lg:px-24"><Section.Footer/></div>
+      <div className="space-y-12 lg:px-24">
+        <Section.Footer />
+      </div>
     </main>
   )
 }

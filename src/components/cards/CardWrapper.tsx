@@ -4,14 +4,14 @@ import { twMerge } from "tailwind-merge"
 
 interface CardWrapperProps {
     bgColor?: "primary" | "secondary" | "tertiary" | undefined
-    size?: "sm" | "md" | "lg" | "full" 
+    size?: "sm" | "md" | "lg" | "full"
     rounded?: "none" | "sm" | "lg" | "lgTop"
     border?: "none" | "basic"
     className?: string
     children: ReactNode
 }
 
-export function CardWrapper({ bgColor, size, rounded, border, children, className}: CardWrapperProps) {
+export function CardWrapper({ bgColor, size, rounded, border, children, className }: CardWrapperProps) {
     const item = tv({
         base: 'p-6',
 
@@ -41,13 +41,22 @@ export function CardWrapper({ bgColor, size, rounded, border, children, classNam
         defaultVariants: {
             bgCard: 'primary',
             heightCard: 'full',
-            roundedCard: 'lg', 
+            roundedCard: 'lg',
             borderCard: 'basic'
         }
     })
 
     return (
-        <div className={twMerge(item({ bgCard: bgColor, heightCard: size, roundedCard: rounded, borderCard: border }), className)}>
+        <div className={
+            twMerge(
+                item({
+                    bgCard: bgColor,
+                    heightCard: size,
+                    roundedCard: rounded,
+                    borderCard: border
+                }),
+                className)
+        }>
             {children}
         </div>
     )

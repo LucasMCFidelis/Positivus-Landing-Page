@@ -43,11 +43,20 @@ export function SectionTeam() {
                         resume: "2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries"
                     },
                 ].map((person, idx) => (
-                    <TeamCard key={idx} name={person.name} position={person.position} pathImage={`/public/assets/profile-team/${person.name}.png`} altImage={person.name} resumePerson={person.resume} />
+                    <TeamCard
+                        key={idx}
+                        name={person.name}
+                        position={person.position}
+                        pathImage={`/public/assets/profile-team/${person.name}.png`}
+                        altImage={person.name}
+                        resumePerson={person.resume}
+                    />
                 ))}
             </div>
             <div className="flex justify-end">
-                <Button colorBG={"dark"}>
+                <Button
+                    colorBG={"dark"}
+                >
                     See all team
                 </Button>
             </div>

@@ -17,7 +17,11 @@ export function HeaderMenu() {
                 <div className="flex flex-col">
                     {isOpenMenu ? (
                         <div className="fixed inset-0 bg-black/80 flex items-start justify-end">
-                            <Card.Wrapper bgColor="tertiary" size="sm" className="space-y-5 m-4 flex flex-col items-end">
+                            <Card.Wrapper
+                                bgColor="tertiary"
+                                size="sm"
+                                className="space-y-5 m-4 flex flex-col items-end"
+                            >
                                 <Button
                                     colorBG={"dark"}
                                     onClick={toggleMenu}
@@ -25,8 +29,13 @@ export function HeaderMenu() {
                                 >
                                     <X size={sizeButtons} />
                                 </Button>
-                                <Header.Nav direction="dynamic" />
-                                <Button colorBG={"white"} border={true}>
+                                <Header.Nav
+                                    direction="dynamic"
+                                />
+                                <Button
+                                    colorBG={"white"}
+                                    border={true}
+                                >
                                     Request a quotes
                                 </Button>
                             </Card.Wrapper>
@@ -38,15 +47,23 @@ export function HeaderMenu() {
                                 onClick={toggleMenu}
                                 className="w-fit"
                             >
-                                <Menu size={sizeButtons} />
+                                <Menu
+                                    size={sizeButtons}
+                                />
                             </Button>
                         </>
                     )}
                 </div>
             ) : (
                 <div className="flex items-center space-x-10">
-                    <Header.Nav direction="row" />
-                    <Button colorBG={"transparent"} border={true} className="hidden lg:block">
+                    <Header.Nav
+                        direction="row"
+                    />
+                    <Button
+                        colorBG={"transparent"}
+                        border={true}
+                        className="hidden lg:block"
+                    >
                         Request a quotes
                     </Button>
                 </div>
