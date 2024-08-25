@@ -1,5 +1,6 @@
 import { paragraph } from "../../app"
 import { Button } from "../button"
+import MarketingImg from "/public/assets/megafone.svg"
 
 interface SectionMarketingProps {
     paragraphSize?: "full" | "sm" | "md" | "lg" | undefined
@@ -50,7 +51,7 @@ export function SectionMarketing({ paragraphSize, alignTextMobile }: SectionMark
                 Book a consultation
             </Button>
             <img
-                src="/public/assets/megafone.svg"
+                src={MarketingImg}
                 alt=""
                 className="[grid-area:image] w-full h-full place-self-center"
             />
