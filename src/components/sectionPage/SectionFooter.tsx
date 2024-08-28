@@ -5,9 +5,9 @@ import { Header } from "../header";
 
 export function SectionFooter() {
     const contactUs = [
-        ["Email", "info@positivus.com"],
-        ["Phone", "5555678901"],
-        ["Address", "1234 Main St Moonstone City, Stardust State 12345"]
+        { type: "Email", value: "info@positivus.com"},
+        { type: "Phone", value: "5555678901"},
+        { type: "Address", value: "1234 Main St Moonstone City, Stardust State 12345"}
     ]
     return (
         <Card.Wrapper
@@ -32,8 +32,8 @@ export function SectionFooter() {
                     </h3>
                     {contactUs.map((item) => (
                         <p
-                            key={item[0]}
-                            className="text-[#f3f3f3]">{item[0]}: {item[1]}
+                            key={item.type}
+                            className="text-[#f3f3f3]">{item.type}: {item.value}
                         </p>
                     ))}
                 </div>
