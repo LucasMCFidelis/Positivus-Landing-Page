@@ -1,6 +1,6 @@
 import { paragraph } from "../../app"
 import { Button } from "../button"
-import MarketingImg from "/public/assets/megafone.svg"
+import MarketingImg from "/assets/megafone.svg"
 
 interface SectionMarketingProps {
     paragraphSize?: "full" | "sm" | "md" | "lg" | undefined

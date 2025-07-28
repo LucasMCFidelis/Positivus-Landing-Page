@@ -39,7 +39,7 @@ export function SectionContactUs() {
                     </Button>
                 </form>
                 <img
-                    src="/public/assets/contactUsImage.svg"
+                    src="/assets/contactUsImage.svg"
                     alt="Contact Us"
                     className="absolute hidden h-4/5 w-3/5 lg:block top-[10%] -right-[28%]"
                 />

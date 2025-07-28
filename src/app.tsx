@@ -42,7 +42,7 @@ export function App() {
             {["amazon", "dribbble", "hubspot", "notion", "netflix", "zoom"].map((logo, idx) => (
               <img
                 key={idx}
-                src={`/public/assets/logos-marquee/${logo}.svg`}
+                src={`/assets/logos-marquee/${logo}.svg`}
                 alt={`${logo} Logo`}
                 className={`w-[25vw] xl:w-[15vw] h-auto lg:px-14 ${idx >= 3 ? "ml-16 lg:ml-0" : ""}`}
               />

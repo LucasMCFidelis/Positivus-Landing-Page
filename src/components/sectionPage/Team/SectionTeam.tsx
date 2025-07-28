@@ -47,7 +47,7 @@ export function SectionTeam() {
                         key={idx}
                         name={person.name}
                         position={person.position}
-                        pathImage={`/public/assets/profile-team/${person.name}.png`}
+                        pathImage={`/assets/profile-team/${person.name}.png`}
                         altImage={person.name}
                         resumePerson={person.resume}
                     />

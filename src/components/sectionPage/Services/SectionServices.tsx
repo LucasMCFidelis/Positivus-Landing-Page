@@ -18,42 +18,42 @@ export function SectionServices() {
                     bgCard="primary"
                     bgTitle="green"
                     styleLink="dark"
-                    pathImage="/public/assets/icons-services/search.svg"
+                    pathImage="/assets/icons-services/search.svg"
                 />
                 <ServiceCard
                     title="Pay-per-click advertising"
                     bgCard="secondary"
                     bgTitle="white"
                     styleLink="dark"
-                    pathImage="/public/assets/icons-services/advertising.svg"
+                    pathImage="/assets/icons-services/advertising.svg"
                 />
                 <ServiceCard
                     title="Social Media Marketing"
                     bgCard="tertiary"
                     bgTitle="white"
                     styleLink="white"
-                    pathImage="/public/assets/icons-services/marketing.svg"
+                    pathImage="/assets/icons-services/marketing.svg"
                 />
                 <ServiceCard
                     title="Email Marketing"
                     bgCard="primary"
                     bgTitle="green"
                     styleLink="dark"
-                    pathImage="/public/assets/icons-services/email.svg"
+                    pathImage="/assets/icons-services/email.svg"
                 />
                 <ServiceCard
                     title="Content Creation"
                     bgCard="secondary"
                     bgTitle="white"
                     styleLink="dark"
-                    pathImage="/public/assets/icons-services/content-creation.svg"
+                    pathImage="/assets/icons-services/content-creation.svg"
                 />
                 <ServiceCard
                     title="Analytics and Tracking"
                     bgCard="tertiary"
                     bgTitle="green"
                     styleLink="white"
-                    pathImage="/public/assets/icons-services/analytics.svg"
+                    pathImage="/assets/icons-services/analytics.svg"
                 />
             </div>
             <div className="w-full">
